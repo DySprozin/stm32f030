@@ -1,12 +1,6 @@
 
 #define TX_PORT      9
 #define RX_PORT      10
-#define TIM31          6
-#define TIM32          7
-#define TIM14_1        4
-
-
-
 
 #define TEMPF(ARG1, ARG2, ARG3)         ARG1##ARG2##ARG3
  

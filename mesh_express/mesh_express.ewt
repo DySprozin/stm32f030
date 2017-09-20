@@ -2108,6 +2108,9 @@
         <name>$PROJ_DIR$\src\inc\def.h</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\src\inc\pwm.h</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\src\inc\stm32f0xx.h</name>
       </file>
       <file>
@@ -2119,6 +2122,9 @@
     </group>
     <group>
       <name>lib</name>
+      <file>
+        <name>$PROJ_DIR$\src\lib\pwm.c</name>
+      </file>
       <file>
         <name>$PROJ_DIR$\src\lib\usart.c</name>
       </file>
