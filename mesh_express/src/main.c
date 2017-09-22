@@ -8,18 +8,23 @@
 volatile long ch=0;
 
 void main(void) {
-
- SysTick_Config(7);
- for (;ch<1000000;ch++) {
- }
+//SysTick->VAL
+ SysTick_Config(79);
     pwm_tim31();
+ usart1_init(833);
+ usart1_tx_init();
+ usart1_rx_init();
+ 
  while(1);
 }
 
 
 void SysTick_Handler(void) {
-  //(long)ch++;
-  //if ((long)ch > 1000000) ;
+  (long)ch++;
+  if ((long)ch > 100000) {
+    usart1_tx('!');
+    ch = 0;
+  }
 }
 
 
