@@ -1,6 +1,6 @@
 
 #define TIM3_ARR        9       //до скольки считает таймер перед сбросом
-#define TIM3_CCR1       1       //сколько тиков PWM-порт в активном состоянии
+#define TIM3_CCR1       8       //сколько тиков PWM-порт в активном состоянии
 #define TIM3_PSC        799      //делитель частоты
 
 
@@ -10,4 +10,5 @@
 
 #define TIM31      6
 
-void pwm_tim31_init();
+void pwm_tim31();
+

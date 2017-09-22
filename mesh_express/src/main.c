@@ -1,16 +1,26 @@
 #include "stm32f0xx.h"
 #include "def.h"
-#include "pwm.h"
+#include "tim3.h"
 #include "usart.h"
  
 
 
+volatile long ch=0;
+
 void main(void) {
 
-  
+ SysTick_Config(7);
+ for (;ch<1000000;ch++) {
+ }
+    pwm_tim31();
+ while(1);
 }
 
 
+void SysTick_Handler(void) {
+  //(long)ch++;
+  //if ((long)ch > 1000000) ;
+}
 
 
 

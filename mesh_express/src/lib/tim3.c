@@ -1,6 +1,6 @@
 #include "stm32f0xx.h"
 #include "def.h"
-#include "pwm.h"
+#include "tim3.h"
 #include "usart.h"
 
 void pwm_tim31() {
