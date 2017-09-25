@@ -1924,6 +1924,9 @@
     <group>
       <name>inc</name>
       <file>
+        <name>$PROJ_DIR$\src\inc\adc.h</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\src\inc\def.h</name>
       </file>
       <file>
@@ -1941,6 +1944,9 @@
     </group>
     <group>
       <name>lib</name>
+      <file>
+        <name>$PROJ_DIR$\src\lib\adc.c</name>
+      </file>
       <file>
         <name>$PROJ_DIR$\src\lib\tim3.c</name>
       </file>

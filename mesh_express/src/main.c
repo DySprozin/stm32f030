@@ -2,28 +2,136 @@
 #include "def.h"
 #include "tim3.h"
 #include "usart.h"
+#include "adc.h"
  
+#define DEBUG_A          0
+#define PIN_CHROT_A       4
 
+volatile int ch_rots, ch_rots_slow, ch_rots_permin;
 
-volatile long ch=0;
+void ChRots(void);
+void CheckPinChRots(void);
+void CheckChRotsTime(void);
+void CheckChRotsTimeSlow(void);
+
+struct {
+  unsigned pin_chrot : 1;
+  unsigned pin_chrot_tmp : 1;
+  unsigned pin_check_rots : 1;
+  unsigned check_rots_time : 1;
+  unsigned check_rots_time_slow : 1;
+  
+  unsigned adc_ready : 1;
+} fl;
+
+volatile static struct {
+  int check_rots; //таймер подсчета оборотов
+  int ch_rots; //таймер вывода значений об/сек
+  int ch_rots_slow; //таймер точного вывода значений об/сек
+} timer;
 
 void main(void) {
+  RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
+  GPIOA->MODER |= MODER_01(DEBUG_A);
+  GPIOA->MODER &= ~MODER_11(PIN_CHROT_A);
+  GPIOA->PUPDR |= PUPDR_10(PIN_CHROT_A);
+  
+  
+  GPIOA->OSPEEDR |= OSPEEDR_11(DEBUG_A) | OSPEEDR_11(PIN_CHROT_A);
+  
+  
 //SysTick->VAL
- SysTick_Config(79);
+ SysTick_Config(799); //per 100 us
     pwm_tim31();
  usart1_init(833);
  usart1_tx_init();
  usart1_rx_init();
  
- while(1);
+ timer.ch_rots_slow = 60000;
+ timer.ch_rots = 10000;
+ timer.check_rots = 1;
+ 
+  adc_init();
+ 
+ while(1) {
+  GPIOA->BSRR |= BR(DEBUG_A);
+  if (fl.pin_chrot) ChRots();
+  if (fl.pin_check_rots) CheckPinChRots();
+  if (fl.check_rots_time) CheckChRotsTime();
+  if (fl.check_rots_time_slow) CheckChRotsTimeSlow();
+  if (fl.adc_ready) ////////////////////////////////////////////////
+ }
 }
 
 
-void SysTick_Handler(void) {
-  (long)ch++;
-  if ((long)ch > 100000) {
-    usart1_tx('!');
-    ch = 0;
+void SysTick_Handler(void) { 
+  
+  //Timers
+  if (timer.check_rots > 1) timer.check_rots--;
+  else if (timer.check_rots == 1) fl.pin_check_rots = 1;
+  
+  if (timer.ch_rots > 1) timer.ch_rots--;
+  else if (timer.ch_rots == 1) fl.check_rots_time = 1;
+  
+  if (timer.ch_rots_slow > 1) timer.ch_rots_slow--;
+  else if (timer.ch_rots_slow == 1) fl.check_rots_time_slow = 1;
+  //Timers
+  
+  
+
+}
+
+void ADC1_COMP_IRQHandler() {
+  if ((ADC1->ISR & ADC_ISR_ADRDY) == ADC_ISR_ADRDY) {
+    ADC1->ISR |= ADC_ISR_ADRDY;
+    usart1_tx_str("\r\nok\r\n");
+  }
+}
+
+
+void CheckChRotsTimeSlow() {
+  fl.check_rots_time = 0;
+  fl.check_rots_time_slow = 0;
+  timer.ch_rots = 0;
+  
+  timer.ch_rots_slow = 60000; //6 sec
+  ch_rots_permin = ch_rots_slow * 10;
+  usart_tx_num(ch_rots_permin,4);
+  usart1_tx('\r');
+  usart1_tx('\n');
+  ch_rots = 0;
+  ch_rots_slow = 0;
+}
+
+void CheckChRotsTime() {
+  fl.check_rots_time = 0;
+  timer.ch_rots = 10000; //1 sec
+  ch_rots_permin = ch_rots * 60;
+  usart_tx_num(ch_rots_permin,4);
+  usart1_tx('\r');
+  usart1_tx('\n');
+  ch_rots = 0;
+}
+
+void CheckPinChRots() {
+  fl.pin_check_rots = 0;
+  timer.check_rots = 1;
+  
+  if ((GPIOA->IDR) & (IDR(PIN_CHROT_A))) {
+    fl.pin_chrot = 1;
+  }
+  else {
+    fl.pin_chrot = 0;
+    fl.pin_chrot_tmp = 0;
+  }
+}
+
+void ChRots(void) {
+  if (fl.pin_chrot != fl.pin_chrot_tmp) {
+    fl.pin_chrot_tmp = fl.pin_chrot;
+    ch_rots++;
+    ch_rots_slow++;
+    GPIOA->BSRR |= BS(DEBUG_A);
   }
 }
 
@@ -36,10 +144,8 @@ void SysTick_Handler(void) {
 
 
 
-
-
 /*
-@ считать обороты
+@ считать обороты+++++++++
 @ делать шим
 @ показывать обороты
 @@ (текущие и реальные)
@@ -74,3 +180,5 @@ display("rot/min set:"+rot_min_set,2)
 }
 
 */
+
+
