@@ -3,10 +3,10 @@
 #include "adc.h"
 
 void adc_init() {
- RCC->AHBENR |= RCC_AHBENR_GPIOBEN;
+ RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
  RCC->APB2ENR |= RCC_APB2ENR_ADC1EN;
- GPIOB->MODER &= ~MODER_11(ADC_PORT_B);
- GPIOB->PUPDR &= ~PUPDR_11(ADC_PORT_B);
+ GPIOA->MODER &= ~MODER_11(ADC_PORT_A);
+ GPIOA->PUPDR &= ~PUPDR_11(ADC_PORT_A);
  
  if ((ADC1->CR & ADC_CR_ADEN) != 0) {
   ADC1->CR &= (uint32_t)(~ADC_CR_ADEN);
@@ -26,7 +26,7 @@ void adc_init() {
 ///////
 //Ниже нужно будет создать флаг/прерывание для while(ADC1->CR & ADC_CR_ADSTART);
 void adc_select() {
-  ADC1->CHSELR = ADC_CHSELR_CHSEL0;
+  ADC1->CHSELR = ADC_CHSELR_CHSEL1;
   ADC1->CFGR1 &= ~ADC_CFGR1_CONT;
 }
 
