@@ -175,10 +175,12 @@ void AdcGo() {
 
 void AdcDiff() {
  adc_diff = (rots_set_tmp - rots_set);
- if(adc_diff > 20 || adc_diff < -20) {
+ if(adc_diff > 50 || adc_diff < -50) {
   usart1_tx('!');
   timer.ch_rots_slow = 60000;
   timer.ch_rots = 10000;
+  ch_rots = 0;
+  ch_rots_slow = 0;
   rots_set_tmp = rots_set;
  }
 }
