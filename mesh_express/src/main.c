@@ -134,6 +134,7 @@ void CheckChRotsTimeSlow() {
   usart_tx_num(ch_rots_permin,4);
   usart1_tx('\r');
   usart1_tx('\n');
+  usart1_tx_str("set6s: ");
   usart_tx_num(rots_set,4);
   usart1_tx('\r');
   usart1_tx('\n');
@@ -147,10 +148,11 @@ void CheckChRotsTime() {
   ch_rots_permin = ch_rots * 60;
   usart1_tx('\r');
   usart1_tx('\n');
-  usart_tx_num(rots_set,4);
+  usart_tx_num(ch_rots_permin,4);
   usart1_tx('\r');
   usart1_tx('\n');
-  usart_tx_num(ch_rots_permin,4);
+  usart1_tx_str("set1s: ");
+  usart_tx_num(rots_set,4);
   usart1_tx('\r');
   usart1_tx('\n');
   ch_rots = 0;

@@ -8,6 +8,8 @@ void ldc_init() {
 }
 
 void lcd_write(int byte, int rs) {
+  ;
+  /*
   set e1;
   set byte >> 4;
   sleep;
@@ -15,5 +17,5 @@ void lcd_write(int byte, int rs) {
   set e1;
   set byte & 0x0F;
   sleep;
-  set e0;
+  set e0;*/
 }

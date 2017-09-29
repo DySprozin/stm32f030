@@ -8,9 +8,9 @@ static struct {
 } lcd;
 
 static struct {
-  int 
+  int test;
 } timer_lcd;
 
 void lcd_init(void);
 
-void lcd_write(int byte);
+void lcd_write(int byte, int rs);

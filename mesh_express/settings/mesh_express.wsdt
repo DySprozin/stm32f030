@@ -35,6 +35,7 @@
                 <ExpandedNode>mesh_express</ExpandedNode>
                 <ExpandedNode>mesh_express/src</ExpandedNode>
                 <ExpandedNode>mesh_express/src/inc</ExpandedNode>
+                <ExpandedNode>mesh_express/src/lib</ExpandedNode>
               </NodeDict>
             </Session>
           </Tab>
@@ -63,11 +64,10 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>42</YPos2>
-          <SelStart2>1589</SelStart2>
-          <SelEnd2>1589</SelEnd2>
+          <YPos2>80</YPos2>
+          <SelStart2>0</SelStart2>
+          <SelEnd2>0</SelEnd2>
         </Tab>
-        <ActiveTab>0</ActiveTab>
         <Tab>
           <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\src\inc\adc.h</Filename>
@@ -77,8 +77,8 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>2</SelStart2>
-          <SelEnd2>2</SelEnd2>
+          <SelStart2>203</SelStart2>
+          <SelEnd2>203</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -89,8 +89,8 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>451</SelStart2>
-          <SelEnd2>451</SelEnd2>
+          <SelStart2>0</SelStart2>
+          <SelEnd2>0</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -101,8 +101,33 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>361</SelStart2>
-          <SelEnd2>361</SelEnd2>
+          <SelStart2>214</SelStart2>
+          <SelEnd2>214</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\src\inc\lcd.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>0</YPos2>
+          <SelStart2>215</SelStart2>
+          <SelEnd2>215</SelEnd2>
+        </Tab>
+        <ActiveTab>4</ActiveTab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\src\lib\lcd.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>0</YPos2>
+          <SelStart2>165</SelStart2>
+          <SelEnd2>165</SelEnd2>
         </Tab>
       </Pane>
       <ActivePane>0</ActivePane>
