@@ -1930,6 +1930,9 @@
         <name>$PROJ_DIR$\src\inc\def.h</name>
       </file>
       <file>
+        <name>$PROJ_DIR$\src\inc\lcd.h</name>
+      </file>
+      <file>
         <name>$PROJ_DIR$\src\inc\stm32f0xx.h</name>
       </file>
       <file>
@@ -1946,6 +1949,9 @@
       <name>lib</name>
       <file>
         <name>$PROJ_DIR$\src\lib\adc.c</name>
+      </file>
+      <file>
+        <name>$PROJ_DIR$\src\lib\lcd.c</name>
       </file>
       <file>
         <name>$PROJ_DIR$\src\lib\tim3.c</name>

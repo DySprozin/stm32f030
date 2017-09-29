@@ -7,8 +7,5 @@
 #define H_BEFORE_CCR1   TIM_CCMR1_OC1M_1 | TIM_CCMR1_OC1M_2     //порт активен, пока не досчитает до TIM3_CCR1
 #define H_AFTER_CCR1    TIM_CCMR1_OC1M                          //порт активен, после того, как досчитает до TIM3_CCR1
 
-
-#define TIM31      6
-
 void pwm_tim31();
 

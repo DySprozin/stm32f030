@@ -27,13 +27,14 @@
       <Wnd3>
         <Tabs>
           <Tab>
-            <Identity>TabID-28028-26641</Identity>
+            <Identity>TabID-25553-16459</Identity>
             <TabName>Workspace</TabName>
             <Factory>Workspace</Factory>
             <Session>
               <NodeDict>
                 <ExpandedNode>mesh_express</ExpandedNode>
                 <ExpandedNode>mesh_express/src</ExpandedNode>
+                <ExpandedNode>mesh_express/src/inc</ExpandedNode>
               </NodeDict>
             </Session>
           </Tab>
@@ -43,7 +44,7 @@
       <Wnd4>
         <Tabs>
           <Tab>
-            <Identity>TabID-6008-26645</Identity>
+            <Identity>TabID-3533-16463</Identity>
             <TabName>Build</TabName>
             <Factory>Build</Factory>
             <Session/>
@@ -62,11 +63,47 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>9</YPos2>
-          <SelStart2>661</SelStart2>
-          <SelEnd2>661</SelEnd2>
+          <YPos2>42</YPos2>
+          <SelStart2>1589</SelStart2>
+          <SelEnd2>1589</SelEnd2>
         </Tab>
         <ActiveTab>0</ActiveTab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\src\inc\adc.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>0</YPos2>
+          <SelStart2>2</SelStart2>
+          <SelEnd2>2</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\src\inc\tim3.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>0</YPos2>
+          <SelStart2>451</SelStart2>
+          <SelEnd2>451</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\src\inc\def.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>0</YPos2>
+          <SelStart2>361</SelStart2>
+          <SelEnd2>361</SelEnd2>
+        </Tab>
       </Pane>
       <ActivePane>0</ActivePane>
       <Sizes>

@@ -1,6 +1,4 @@
 
-#define ADC_PORT_A      1
-
 void adc_init(void);
 
 void adc_select(void);
@@ -12,3 +10,8 @@ static struct {
   unsigned go : 1;
   unsigned diff : 1;
 } adcf;
+
+static struct {
+  int start;
+  int diff;
+} timer_adc;

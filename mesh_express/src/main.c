@@ -4,8 +4,13 @@
 #include "usart.h"
 #include "adc.h"
  
-#define DEBUG_A          0
-#define PIN_CHROT_A       4
+
+#define D4                      LCD_D4_A
+#define D5                      LCD_D5_A
+#define D6                      LCD_D6_A
+#define D7                      LCD_D7_A
+#define E                       LCD_E_A
+#define RS                      LCD_RS_A
 
 volatile int ch_rots, 
             ch_rots_slow,
@@ -33,18 +38,30 @@ volatile static struct {
   int check_rots; //таймер подсчета оборотов
   int ch_rots; //таймер вывода значений об/сек
   int ch_rots_slow; //таймер точного вывода значений об/сек
-  int adc_start;
-  int adc_diff;
 } timer;
 
 void main(void) {
+  
   RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
-  GPIOA->MODER |= MODER_01(DEBUG_A);
+  
+  
+ ////
+ //Подготовка портов 13,14
+ GPIOA->MODER &= ~(GPIO_MODER_MODER13 | GPIO_MODER_MODER14);
+ GPIOA->OTYPER &= ~(GPIO_OTYPER_OT_13 | GPIO_OTYPER_OT_14);
+ GPIOA->PUPDR &= ~(GPIO_PUPDR_PUPDR13 | GPIO_PUPDR_PUPDR14);
+ //
+ //
+  
+  
+  GPIOB->MODER |= MODER_01(DEBUG_B);
   GPIOA->MODER &= ~MODER_11(PIN_CHROT_A);
   GPIOA->PUPDR |= PUPDR_10(PIN_CHROT_A);
   
   
-  GPIOA->OSPEEDR |= OSPEEDR_11(DEBUG_A) | OSPEEDR_11(PIN_CHROT_A);
+  
+  GPIOA->OSPEEDR |= OSPEEDR_11(PIN_CHROT_A);
+  GPIOB->OSPEEDR |= OSPEEDR_11(DEBUG_B);
   
   
 //SysTick->VAL
@@ -61,7 +78,7 @@ void main(void) {
   adc_init();
  
  while(1) {
-  GPIOA->BSRR |= BR(DEBUG_A);
+  GPIOB->BSRR |= BR(DEBUG_B);
   if (chrotf.check_pin) CheckPinChRots();
   if (chrotf.check_pertime) CheckChRotsTime();
   if (chrotf.check_pertime_slow) CheckChRotsTimeSlow();
@@ -84,11 +101,11 @@ void SysTick_Handler(void) {
   if (timer.ch_rots_slow > 1) timer.ch_rots_slow--;
   else if (timer.ch_rots_slow == 1) chrotf.check_pertime_slow = 1;
   
-  if (timer.adc_start > 1) timer.adc_start--;
-  else if (timer.adc_start == 1) adcf.go = 1;
+  if (timer_adc.start > 1) timer_adc.start--;
+  else if (timer_adc.start == 1) adcf.go = 1;
   
-  if (timer.adc_diff > 1) timer.adc_diff--;
-  else if (timer.adc_diff == 1) adcf.diff = 1;
+  if (timer_adc.diff > 1) timer_adc.diff--;
+  else if (timer_adc.diff == 1) adcf.diff = 1;
   //Timers
   
   
@@ -98,8 +115,8 @@ void SysTick_Handler(void) {
 void ADC1_COMP_IRQHandler() {
   if ((ADC1->ISR & ADC_ISR_ADRDY) == ADC_ISR_ADRDY) {
     ADC1->ISR |= ADC_ISR_ADRDY;
-    timer.adc_start = 100;
-    timer.adc_diff = 1000;
+    timer_adc.start = 100;
+    timer_adc.diff = 1000;
     adcf.start = 1;
   }
 }
@@ -158,13 +175,13 @@ void ChRots() {
     pin_state_tmp = pin_state;
     ch_rots++;
     ch_rots_slow++;
-    GPIOA->BSRR |= BS(DEBUG_A);
+    GPIOB->BSRR |= BS(DEBUG_B);
   }
 }
 
 void AdcGo() {
  adcf.go = 0;
- timer.adc_start = 100; 
+ timer_adc.start = 100; 
  rots_set = getadc();
  rots_set = rots_set / 10;
  rots_set = rots_set * 10;
