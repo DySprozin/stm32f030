@@ -10,13 +10,13 @@
     <Static>
       <Build>
         <ColumnWidth0>20</ColumnWidth0>
-        <ColumnWidth1>1155</ColumnWidth1>
-        <ColumnWidth2>308</ColumnWidth2>
-        <ColumnWidth3>77</ColumnWidth3>
+        <ColumnWidth1>980</ColumnWidth1>
+        <ColumnWidth2>261</ColumnWidth2>
+        <ColumnWidth3>65</ColumnWidth3>
       </Build>
       <Workspace>
         <ColumnWidths>
-          <Column0>124</Column0>
+          <Column0>107</Column0>
           <Column1>27</Column1>
           <Column2>27</Column2>
           <Column3>27</Column3>
@@ -27,7 +27,18 @@
       <Wnd3>
         <Tabs>
           <Tab>
-            <Identity>TabID-25553-16459</Identity>
+            <Identity>TabID-4417-25759</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        <SelectedTab>0</SelectedTab>
+      </Wnd3>
+      <Wnd4>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-15166-25763</Identity>
             <TabName>Workspace</TabName>
             <Factory>Workspace</Factory>
             <Session>
@@ -38,17 +49,6 @@
                 <ExpandedNode>mesh_express/src/lib</ExpandedNode>
               </NodeDict>
             </Session>
-          </Tab>
-        </Tabs>
-        <SelectedTab>0</SelectedTab>
-      </Wnd3>
-      <Wnd4>
-        <Tabs>
-          <Tab>
-            <Identity>TabID-3533-16463</Identity>
-            <TabName>Build</TabName>
-            <Factory>Build</Factory>
-            <Session/>
           </Tab>
         </Tabs>
         <SelectedTab>0</SelectedTab>
@@ -64,9 +64,9 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>80</YPos2>
-          <SelStart2>0</SelStart2>
-          <SelEnd2>0</SelEnd2>
+          <YPos2>75</YPos2>
+          <SelStart2>2090</SelStart2>
+          <SelEnd2>2090</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -77,32 +77,20 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>203</SelStart2>
-          <SelEnd2>203</SelEnd2>
+          <SelStart2>21</SelStart2>
+          <SelEnd2>21</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\src\inc\tim3.h</Filename>
+          <Filename>$WS_DIR$\src\lib\adc.c</Filename>
           <XPos>0</XPos>
           <YPos>0</YPos>
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>0</SelStart2>
-          <SelEnd2>0</SelEnd2>
-        </Tab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\src\inc\def.h</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>214</SelStart2>
-          <SelEnd2>214</SelEnd2>
+          <SelStart2>120</SelStart2>
+          <SelEnd2>120</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -112,11 +100,10 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>215</SelStart2>
-          <SelEnd2>215</SelEnd2>
+          <YPos2>5</YPos2>
+          <SelStart2>289</SelStart2>
+          <SelEnd2>299</SelEnd2>
         </Tab>
-        <ActiveTab>4</ActiveTab>
         <Tab>
           <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\src\lib\lcd.c</Filename>
@@ -125,9 +112,22 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
+          <YPos2>3</YPos2>
+          <SelStart2>498</SelStart2>
+          <SelEnd2>498</SelEnd2>
+        </Tab>
+        <ActiveTab>4</ActiveTab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\src\inc\def.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
           <YPos2>0</YPos2>
-          <SelStart2>165</SelStart2>
-          <SelEnd2>165</SelEnd2>
+          <SelStart2>146</SelStart2>
+          <SelEnd2>146</SelEnd2>
         </Tab>
       </Pane>
       <ActivePane>0</ActivePane>
@@ -143,31 +143,31 @@
       <Top>
         <Row0>
           <Sizes>
-            <Toolbar-00C6E9D8>
+            <Toolbar-00D0E7E8>
               <key>iaridepm.enu1</key>
-            </Toolbar-00C6E9D8>
+            </Toolbar-00D0E7E8>
           </Sizes>
         </Row0>
       </Top>
       <Left>
         <Row0>
           <Sizes>
-            <Wnd3>
+            <Wnd4>
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
-                <Bottom>575</Bottom>
+                <Bottom>199</Bottom>
                 <Right>198</Right>
                 <x>-2</x>
                 <y>-2</y>
                 <xscreen>200</xscreen>
                 <yscreen>200</yscreen>
-                <sizeHorzCX>125000</sizeHorzCX>
-                <sizeHorzCY>244499</sizeHorzCY>
-                <sizeVertCX>125000</sizeVertCX>
-                <sizeVertCY>705379</sizeVertCY>
+                <sizeHorzCX>146413</sizeHorzCX>
+                <sizeHorzCY>310559</sizeHorzCY>
+                <sizeVertCX>146413</sizeVertCX>
+                <sizeVertCY>625776</sizeVertCY>
               </Rect>
-            </Wnd3>
+            </Wnd4>
           </Sizes>
         </Row0>
       </Left>
@@ -179,22 +179,22 @@
       <Bottom>
         <Row0>
           <Sizes>
-            <Wnd4>
+            <Wnd3>
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
                 <Bottom>198</Bottom>
-                <Right>1602</Right>
+                <Right>1368</Right>
                 <x>-2</x>
                 <y>-2</y>
-                <xscreen>1604</xscreen>
+                <xscreen>1370</xscreen>
                 <yscreen>200</yscreen>
-                <sizeHorzCX>1002500</sizeHorzCX>
-                <sizeHorzCY>244499</sizeHorzCY>
-                <sizeVertCX>125000</sizeVertCX>
-                <sizeVertCY>244499</sizeVertCY>
+                <sizeHorzCX>1002928</sizeHorzCX>
+                <sizeHorzCY>310559</sizeHorzCY>
+                <sizeVertCX>146413</sizeVertCX>
+                <sizeVertCY>310559</sizeVertCY>
               </Rect>
-            </Wnd4>
+            </Wnd3>
           </Sizes>
         </Row0>
       </Bottom>

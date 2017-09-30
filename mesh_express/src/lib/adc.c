@@ -2,6 +2,12 @@
 #include "def.h"
 #include "adc.h"
 
+
+
+struct adcf_s adcf;
+
+struct timer_adc_s timer_adc;
+
 void adc_init() {
  RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
  RCC->APB2ENR |= RCC_APB2ENR_ADC1EN;

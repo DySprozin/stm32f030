@@ -1,18 +1,11 @@
 
 #define DEBUG_B                 1
 
-#define LCD_D4_A                0
 #define ADC_PORT_A              1
-#define LCD_RS_A                2
-#define LCD_E_A                 3
 #define PIN_CHROT_A             4
 
 #define TIM31                   6
 
-#define LCD_D5_A                5
-#define LCD_D6_A                7
-
-#define LCD_D7_A                13
 
 
 

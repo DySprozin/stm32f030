@@ -3,6 +3,7 @@
 #include "tim3.h"
 #include "usart.h"
 #include "adc.h"
+#include "lcd.h"
  
 
 #define D4                      LCD_D4_A
@@ -41,7 +42,7 @@ volatile static struct {
 } timer;
 
 void main(void) {
-  
+
   RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
   
   
@@ -134,7 +135,7 @@ void CheckChRotsTimeSlow() {
   usart_tx_num(ch_rots_permin,4);
   usart1_tx('\r');
   usart1_tx('\n');
-  usart1_tx_str("set6s: ");
+  usart1_tx_str("set 6 s: ");
   usart_tx_num(rots_set,4);
   usart1_tx('\r');
   usart1_tx('\n');
@@ -151,7 +152,7 @@ void CheckChRotsTime() {
   usart_tx_num(ch_rots_permin,4);
   usart1_tx('\r');
   usart1_tx('\n');
-  usart1_tx_str("set1s: ");
+  usart1_tx_str("set 1 s: ");
   usart_tx_num(rots_set,4);
   usart1_tx('\r');
   usart1_tx('\n');
