@@ -71,6 +71,7 @@ void main(void) {
  timer.check_rots = 1;
  
   adc_init(); 
+  usart1_tx_str("@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
  lcd_init();
 
 
@@ -94,7 +95,7 @@ void main(void) {
   if (adcf.start) adc_select();
   if (adcf.go) AdcGo();
   if (adcf.diff) AdcDiff();
-  if (lcd.write) lcd_write(lcd_byte[lcd_ch], lcd_rs[lcd_ch]);
+  if (lcd.e) lcd_e();
  }
 }
 
@@ -117,8 +118,8 @@ void SysTick_Handler(void) {
   if (timer_adc.diff > 1) timer_adc.diff--;
   else if (timer_adc.diff == 1) adcf.diff = 1;
   
-  if (timer_lcd.write > 1) timer_lcd.write--;
-  else if (timer_lcd.write == 1) lcd.write = 1;
+  if (timer_lcd.start  > 1) timer_lcd.start--;
+  else if (timer_lcd.start == 1) lcd.e = 1;
   //Timers
   
   
@@ -148,7 +149,8 @@ void CheckChRotsTimeSlow() {
   usart1_tx('\r');
   usart1_tx('\n');
   usart1_tx_str("set 6 s: ");
-  usart_tx_num(rots_set,4);
+//////////////////////////////  usart_tx_num(rots_set,4);
+  usart_tx_num(debug,4);
   usart1_tx('\r');
   usart1_tx('\n');
   ch_rots = 0;
@@ -165,7 +167,8 @@ void CheckChRotsTime() {
   usart1_tx('\r');
   usart1_tx('\n');
   usart1_tx_str("set 1 s: ");
-  usart_tx_num(rots_set,4);
+ ////////////////////////////////////// usart_tx_num(rots_set,4);
+  usart_tx_num(lcd_ch_sum,4);
   usart1_tx('\r');
   usart1_tx('\n');
   ch_rots = 0;

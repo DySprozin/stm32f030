@@ -1,11 +1,13 @@
 #include "stm32f0xx.h"
 #include "def.h"
 #include "lcd.h"
+#include "usart.h"
 
-int lcd_byte[10];
-int lcd_rs[10];
-int lcd_ch;
-int lcd_ch_sum;
+int lcd_byte[50];
+int lcd_rs[50];
+int lcd_ch = 0;
+int lcd_ch_sum = 0;
+int debug = 0;
 
 static int p = 0;
 
@@ -34,76 +36,90 @@ void lcd_init() {
   LCD_WRITE(b10000000, LCD_RSCMD);
   LCD_WRITE(b00110001, LCD_RSDATA);
   LCD_WRITE(b00110001, LCD_RSDATA);
-  LCD_WRITE(b00110001, LCD_RSDATA);
-  LCD_WRITE(b00110001, LCD_RSDATA);
-  LCD_WRITE(b00110001, LCD_RSDATA);
 
   
-  timer_lcd.write = 1000;
+  timer_lcd.start = 10;
 
 }
 
-void lcd_write(int byte, int rs) {
-  lcd.write = 0;
-  if (lcd_ch_sum == 0) {
-    LCD_E0;
-    lcd.e0 = 0;
-    timer_lcd.write = 0;
-    return;
+void lcd_e() {
+  lcd.e = 0;
+  timer_lcd.start = 0;
+  
+  
+  
+  if (lcd.h_nibble && lcd.l_nibble) {
+     lcd.h_nibble = 0;
+     lcd.l_nibble = 0;
+     if (lcd_ch < lcd_ch_sum) {
+       lcd_ch++;
+     }
+     else {
+       lcd_ch = 0;
+       lcd_ch_sum = 0;
+       timer_lcd.start = 0;
+       return;
+     }
   }
+  
+  
+
   
   if (!lcd.e1) {
-   LCD_E1;
-   lcd.e1 = 1;
-   lcd.e0 = 0;
-   timer_lcd.write = 1000;
-   return;
-  }
-  
-  if (lcd.e0) {
-    LCD_E0;
-    lcd.e1 = 0;
-    lcd.e0 = 0;
-    timer_lcd.write = 1000;
+      debug++;
+    LCD_E1;
+    lcd.e1 = 1;
+    timer_lcd.start = 10;
     return;
   }
-  
+  else if (!lcd.e0) {
+    lcd_write(lcd_byte[lcd_ch], lcd_rs[lcd_ch]);
+    lcd.e0 = 1;
+    timer_lcd.start = 10;
+    return;
+  }
+  else if (lcd.e0 && lcd.e1) {
+    lcd.e1 = 0;
+    lcd.e0 = 0;
+    LCD_E0;
+    
+    if (lcd_ch_sum == 0) {
+      timer_lcd.start = 0;
+      return;
+    }
+    else timer_lcd.start = 10;
+  }
+}
+
+void lcd_write(int byte, int rs) {
+  if (byte == 0x0) {
+    LCD_DATA;
+    return;
+  }
 
   if (LCD_IFDATA) LCD_DATA;
   if (LCD_IFCMD) LCD_CMD;
 
-  
+
   if (!lcd.h_nibble) {
-    
-    lcd.e0 = 1;
     
     lcd.h_nibble = 1;
     byte = byte >> 4;
+    
   }
   else if (!lcd.l_nibble) {
    lcd.l_nibble = 1;
-   
-   lcd.e0 = 1;
 
    byte = byte & 0x0F;
    
   }
-  else if (lcd.h_nibble && lcd.l_nibble) {
-   lcd.h_nibble = 0;
-   lcd.l_nibble = 0;
-   lcd.e0 = 1;
-   if (lcd_ch < lcd_ch_sum) {
-     lcd_ch++;
-   }
-   else {
-     lcd_ch = 0;
-     lcd_ch_sum = 0;
-     timer_lcd.write = 1000;
-     return;
-   }
-  }
-  
 
+  //   lcd_ch = 0;
+  //   lcd_ch_sum--;
+  //       return;
+  //
+     
+     
   if (byte & b00000001) LCD_D4S;
   else LCD_D4R;
   if (byte & b00000010) LCD_D5S;
@@ -112,9 +128,17 @@ void lcd_write(int byte, int rs) {
   else LCD_D6R;
   if (byte & b00001000) LCD_D7S;
   else LCD_D7R;
-    
-
-  timer_lcd.write = 1000;
+   /* 
+  usart1_tx('\r');
+  usart1_tx('\n');
+  usart1_tx('[');
+  usart_tx_num(byte,4);
+  usart1_tx(':');
+  usart_tx_num(rs,4);
+  usart1_tx(']');
+  usart1_tx('\r');
+  usart1_tx('\n');
+  */
   /*
   set e1;
   set byte >> 4;

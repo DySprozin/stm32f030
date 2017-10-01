@@ -33,23 +33,27 @@
 
 #define LCD_WRITE(LCD_WRITE_BYTE,LCD_WRITE_RS)  lcd_byte[lcd_ch_sum] = LCD_WRITE_BYTE; lcd_rs[lcd_ch_sum] = LCD_WRITE_RS; lcd_ch_sum++
 
-extern int lcd_byte[10];
-extern int lcd_rs[10];
+extern int lcd_byte[50];
+extern int lcd_rs[50];
 extern int lcd_ch;
 extern int lcd_ch_sum;
+extern int debug;
 
 extern struct lcd_s {
   unsigned write : 1;
   unsigned l_nibble : 1;
   unsigned h_nibble : 1;  
-  unsigned e1 : 1;
+  unsigned e : 1;
   unsigned e0 : 1;
+  unsigned e1 : 1;
 } lcd;
 
 extern struct timer_lcd_s {
-  int write;
+  int start;
 } timer_lcd;
 
 void lcd_init(void);
 
 void lcd_write(int byte, int rs);
+
+void lcd_e(void);
