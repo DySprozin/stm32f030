@@ -5,13 +5,7 @@
 #include "adc.h"
 #include "lcd.h"
  
-
-#define D4                      LCD_D4_A
-#define D5                      LCD_D5_A
-#define D6                      LCD_D6_A
-#define D7                      LCD_D7_A
-#define E                       LCD_E_A
-#define RS                      LCD_RS_A
+int p = 0;
 
 volatile int ch_rots, 
             ch_rots_slow,
@@ -76,7 +70,21 @@ void main(void) {
  timer.ch_rots = 10000;
  timer.check_rots = 1;
  
-  adc_init();
+  adc_init(); 
+ lcd_init();
+
+
+
+ // LCD_WRITE('G', LCD_RSDATA);
+ // LCD_WRITE('P', LCD_RSDATA);
+ // LCD_WRITE('N', LCD_RSDATA);
+ // LCD_WRITE('R', LCD_RSDATA);
+
+ 
+  //timer_lcd.write = 100;
+
+  //while (p++ < 1000);
+ // p = 0;
  
  while(1) {
   GPIOB->BSRR |= BR(DEBUG_B);
@@ -86,6 +94,7 @@ void main(void) {
   if (adcf.start) adc_select();
   if (adcf.go) AdcGo();
   if (adcf.diff) AdcDiff();
+  if (lcd.write) lcd_write(lcd_byte[lcd_ch], lcd_rs[lcd_ch]);
  }
 }
 
@@ -107,6 +116,9 @@ void SysTick_Handler(void) {
   
   if (timer_adc.diff > 1) timer_adc.diff--;
   else if (timer_adc.diff == 1) adcf.diff = 1;
+  
+  if (timer_lcd.write > 1) timer_lcd.write--;
+  else if (timer_lcd.write == 1) lcd.write = 1;
   //Timers
   
   

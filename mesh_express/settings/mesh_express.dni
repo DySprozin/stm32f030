@@ -9,7 +9,7 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
-Checksum=667233221
+Checksum=1426450262
 [CodeCoverage]
 Enabled=_ 0
 [Exceptions]
@@ -18,7 +18,7 @@ StopOnThrow=_ 0
 [CallStack]
 ShowArgs=0
 [Disassembly]
-MixedMode=1
+MixedMode=0
 [DriverProfiling]
 Enabled=0
 Mode=1
