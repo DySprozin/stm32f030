@@ -27,12 +27,14 @@ struct {
   unsigned check_pin : 1;
   unsigned check_pertime : 1;
   unsigned check_pertime_slow : 1;
+  unsigned lcd_show : 1;
 } chrotf;
 
 volatile static struct {
   int check_rots; //таймер подсчета оборотов
   int ch_rots; //таймер вывода значений об/сек
   int ch_rots_slow; //таймер точного вывода значений об/сек
+  int lcd_show;
 } timer;
 
 void main(void) {
@@ -83,10 +85,13 @@ void main(void) {
 
  
   //timer_lcd.write = 100;
-
-  //while (p++ < 1000);
- // p = 0;
+/*
+ while (p++ < 100000);
+ p = 0;
+ */
+    lcd_str(" ", 80);
  
+ timer.lcd_show = 1000;
  while(1) {
   GPIOB->BSRR |= BR(DEBUG_B);
   if (chrotf.check_pin) CheckPinChRots();
@@ -96,6 +101,13 @@ void main(void) {
   if (adcf.go) AdcGo();
   if (adcf.diff) AdcDiff();
   if (lcd.e) lcd_e();
+  if (chrotf.lcd_show) {
+    chrotf.lcd_show = 0;
+    timer.lcd_show = 1000;
+    lcd_str("GPNR!", 0);
+    lcd_str("GPNR!", 40);
+
+  }
  }
 }
 
@@ -120,6 +132,9 @@ void SysTick_Handler(void) {
   
   if (timer_lcd.start  > 1) timer_lcd.start--;
   else if (timer_lcd.start == 1) lcd.e = 1;
+  
+  if (timer.lcd_show > 1) timer.lcd_show--;
+  else if (timer.lcd_show == 1) chrotf.lcd_show = 1;
   //Timers
   
   
@@ -149,8 +164,8 @@ void CheckChRotsTimeSlow() {
   usart1_tx('\r');
   usart1_tx('\n');
   usart1_tx_str("set 6 s: ");
-//////////////////////////////  usart_tx_num(rots_set,4);
-  usart_tx_num(debug,4);
+  usart_tx_num(rots_set,4);
+  //usart_tx_num(debug,4);
   usart1_tx('\r');
   usart1_tx('\n');
   ch_rots = 0;
@@ -167,8 +182,9 @@ void CheckChRotsTime() {
   usart1_tx('\r');
   usart1_tx('\n');
   usart1_tx_str("set 1 s: ");
- ////////////////////////////////////// usart_tx_num(rots_set,4);
-  usart_tx_num(lcd_ch_sum,4);
+
+  usart_tx_num(rots_set,4);
+ // usart_tx_num(lcd_ch_sum,4);
   usart1_tx('\r');
   usart1_tx('\n');
   ch_rots = 0;

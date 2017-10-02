@@ -2,6 +2,7 @@
 #include "def.h"
 #include "lcd.h"
 #include "usart.h"
+#include "string.h"
 
 int lcd_byte[50];
 int lcd_rs[50];
@@ -18,7 +19,7 @@ struct timer_lcd_s timer_lcd;
 
 void lcd_init() {
   RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
-  
+
   GPIOA->MODER |= MODER_01(LCD_D4_A) | 
                   MODER_01(LCD_D5_A) | 
                   MODER_01(LCD_D6_A) | 
@@ -30,15 +31,16 @@ void lcd_init() {
   LCD_WRITE(b00101000, LCD_RSCMD);
   LCD_WRITE(b00000001, LCD_RSCMD);
   LCD_WRITE(b00000110, LCD_RSCMD);
-  LCD_WRITE(b00001101, LCD_RSCMD);
+  LCD_WRITE(b00001100, LCD_RSCMD);
   LCD_WRITE(b00000001, LCD_RSCMD);
   LCD_WRITE(b00010100, LCD_RSCMD);
   LCD_WRITE(b10000000, LCD_RSCMD);
-  LCD_WRITE(b00110001, LCD_RSDATA);
-  LCD_WRITE(b00110001, LCD_RSDATA);
-
+  LCD_WRITE(b10000000, LCD_RSCMD);
+  LCD_WRITE(b10000000, LCD_RSCMD);
+  LCD_WRITE(b10000000, LCD_RSCMD);
+  //LCD_WRITE('_', LCD_RSDATA);
   
-  timer_lcd.start = 10;
+  timer_lcd.start = 5;
 
 }
 
@@ -51,10 +53,8 @@ void lcd_e() {
   if (lcd.h_nibble && lcd.l_nibble) {
      lcd.h_nibble = 0;
      lcd.l_nibble = 0;
-     if (lcd_ch < lcd_ch_sum) {
-       lcd_ch++;
-     }
-     else {
+     lcd_ch++;
+     if (lcd_ch >= lcd_ch_sum) {
        lcd_ch = 0;
        lcd_ch_sum = 0;
        timer_lcd.start = 0;
@@ -66,36 +66,31 @@ void lcd_e() {
 
   
   if (!lcd.e1) {
-      debug++;
     LCD_E1;
     lcd.e1 = 1;
-    timer_lcd.start = 10;
+    usart1_tx('E');
+    timer_lcd.start = 5;
     return;
   }
   else if (!lcd.e0) {
     lcd_write(lcd_byte[lcd_ch], lcd_rs[lcd_ch]);
+    usart1_tx('B');
+    usart1_tx('0' + lcd_rs[lcd_ch]);
     lcd.e0 = 1;
-    timer_lcd.start = 10;
+    timer_lcd.start = 5;
     return;
   }
   else if (lcd.e0 && lcd.e1) {
     lcd.e1 = 0;
     lcd.e0 = 0;
     LCD_E0;
+    usart1_tx('e');
+    timer_lcd.start = 5;
     
-    if (lcd_ch_sum == 0) {
-      timer_lcd.start = 0;
-      return;
-    }
-    else timer_lcd.start = 10;
   }
 }
 
 void lcd_write(int byte, int rs) {
-  if (byte == 0x0) {
-    LCD_DATA;
-    return;
-  }
 
   if (LCD_IFDATA) LCD_DATA;
   if (LCD_IFCMD) LCD_CMD;
@@ -128,24 +123,22 @@ void lcd_write(int byte, int rs) {
   else LCD_D6R;
   if (byte & b00001000) LCD_D7S;
   else LCD_D7R;
-   /* 
-  usart1_tx('\r');
-  usart1_tx('\n');
-  usart1_tx('[');
-  usart_tx_num(byte,4);
-  usart1_tx(':');
-  usart_tx_num(rs,4);
-  usart1_tx(']');
-  usart1_tx('\r');
-  usart1_tx('\n');
-  */
-  /*
-  set e1;
-  set byte >> 4;
-  sleep;
-  set e0;
-  set e1;
-  set byte & 0x0F;
-  sleep;
-  set e0;*/
+}
+
+void lcd_str(char *str, int pos) {
+  
+/*  if (lcd_ch_sum > 0) {
+      timer_lcd.start = 0;
+      lcd.write = 0;
+      lcd_ch = 0;
+      lcd_ch_sum = 0;
+  }*/
+  
+  LCD_WRITE((b10000000 + pos), LCD_RSCMD);
+  int i = 0;
+  while(str[i]) {
+    LCD_WRITE(str[i++], LCD_RSDATA);
+  }
+  
+  timer_lcd.start = 5;
 }

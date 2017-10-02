@@ -57,3 +57,5 @@ void lcd_init(void);
 void lcd_write(int byte, int rs);
 
 void lcd_e(void);
+
+void lcd_str(char *str, int pos);
