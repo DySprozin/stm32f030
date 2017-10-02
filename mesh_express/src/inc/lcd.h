@@ -37,7 +37,6 @@ extern int lcd_byte[50];
 extern int lcd_rs[50];
 extern int lcd_ch;
 extern int lcd_ch_sum;
-extern int debug;
 
 extern struct lcd_s {
   unsigned write : 1;
@@ -46,6 +45,7 @@ extern struct lcd_s {
   unsigned e : 1;
   unsigned e0 : 1;
   unsigned e1 : 1;
+  unsigned init : 1;
 } lcd;
 
 extern struct timer_lcd_s {
