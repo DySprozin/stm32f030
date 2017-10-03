@@ -1,7 +1,6 @@
 #include "stm32f0xx.h"
 #include "def.h"
 #include "lcd.h"
-#include "usart.h"
 #include "string.h"
 
 int lcd_byte[300];
@@ -36,7 +35,7 @@ void lcd_init() {
   LCD_WRITE(b00000001, LCD_RSCMD);
   LCD_WRITE(b00010100, LCD_RSCMD);
 
-  // Кириллица
+  // Кириллица и допсимволы
   LCD_WRITE(b01001000, LCD_RSCMD); //0x1 И
   LCD_WRITE(b00010001, LCD_RSDATA);
   LCD_WRITE(b00010001, LCD_RSDATA);
@@ -78,37 +77,35 @@ void lcd_init() {
   LCD_WRITE(b00000000, LCD_RSDATA);
   
   
-  LCD_WRITE(b01101000, LCD_RSCMD); //0x5 --
+  LCD_WRITE(b01101000, LCD_RSCMD); //0x5 - -
+  LCD_WRITE(b00011111, LCD_RSDATA);        
+  LCD_WRITE(b00011011, LCD_RSDATA);        
+  LCD_WRITE(b00011111, LCD_RSDATA);        
+  LCD_WRITE(b00011111, LCD_RSDATA);        
+  LCD_WRITE(b00011111, LCD_RSDATA);        
+  LCD_WRITE(b00011111, LCD_RSDATA);        
+  LCD_WRITE(b00011111, LCD_RSDATA);        
+  LCD_WRITE(b00011111, LCD_RSDATA);        
+                                           
+  LCD_WRITE(b01110000, LCD_RSCMD); //0x6 - -
+  LCD_WRITE(b00011111, LCD_RSDATA);        
+  LCD_WRITE(b00011011, LCD_RSDATA);        
+  LCD_WRITE(b00011111, LCD_RSDATA);        
+  LCD_WRITE(b00011011, LCD_RSDATA);        
+  LCD_WRITE(b00011111, LCD_RSDATA);        
+  LCD_WRITE(b00011111, LCD_RSDATA);        
+  LCD_WRITE(b00011111, LCD_RSDATA);        
+  LCD_WRITE(b00011111, LCD_RSDATA);        
+                                           
+  LCD_WRITE(b01111000, LCD_RSCMD); //0x7 - -
+  LCD_WRITE(b00011111, LCD_RSDATA);        
+  LCD_WRITE(b00011011, LCD_RSDATA);        
+  LCD_WRITE(b00011111, LCD_RSDATA);        
+  LCD_WRITE(b00011011, LCD_RSDATA);        
+  LCD_WRITE(b00011111, LCD_RSDATA);        
+  LCD_WRITE(b00011011, LCD_RSDATA);        
   LCD_WRITE(b00011111, LCD_RSDATA);
-  LCD_WRITE(b00011011, LCD_RSDATA);
   LCD_WRITE(b00011111, LCD_RSDATA);
-  LCD_WRITE(b00011111, LCD_RSDATA);
-  LCD_WRITE(b00011111, LCD_RSDATA);
-  LCD_WRITE(b00011111, LCD_RSDATA);
-  LCD_WRITE(b00011111, LCD_RSDATA);
-  LCD_WRITE(b00011111, LCD_RSDATA);
-            
-  LCD_WRITE(b01110000, LCD_RSCMD); //0x6 --
-  LCD_WRITE(b00011111, LCD_RSDATA); 
-  LCD_WRITE(b00011011, LCD_RSDATA);
-  LCD_WRITE(b00011111, LCD_RSDATA);
-  LCD_WRITE(b00011011, LCD_RSDATA);
-  LCD_WRITE(b00011111, LCD_RSDATA);
-  LCD_WRITE(b00011111, LCD_RSDATA);
-  LCD_WRITE(b00011111, LCD_RSDATA);
-  LCD_WRITE(b00011111, LCD_RSDATA);
-            
-  LCD_WRITE(b01111000, LCD_RSCMD); //0x7 --
-  LCD_WRITE(b00011111, LCD_RSDATA);
-  LCD_WRITE(b00011011, LCD_RSDATA);
-  LCD_WRITE(b00011111, LCD_RSDATA);
-  LCD_WRITE(b00011011, LCD_RSDATA);
-  LCD_WRITE(b00011111, LCD_RSDATA);
-  LCD_WRITE(b00011011, LCD_RSDATA);
-  LCD_WRITE(b00011111, LCD_RSDATA);
-  LCD_WRITE(b00011111, LCD_RSDATA);
-  
-  
   
   LCD_WRITE(b10000000, LCD_RSCMD);  
   
@@ -224,15 +221,7 @@ void lcd_str(char *str, int pos) {
   if (lcd_ch_sum > 100) {
     lcd_ch_sum = 100;
   }
-  /*
-  usart1_tx_str("\r\n%%%% ");
-  usart1_tx_str(str);
-  usart1_tx_str(" : ");
-  usart_tx_num(lcd_ch, 4);
-  usart1_tx_str(" : ");
-  usart_tx_num(lcd_ch_sum, 4);
-  usart1_tx_str(" %%%%\r\n ");
-  */
+
   if (timer_lcd.start > 0) return; 
   
   timer_lcd.start = 1;

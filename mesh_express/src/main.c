@@ -5,7 +5,6 @@
 #include "adc.h"
 #include "lcd.h"
  
-int p = 0;
 
 volatile int ch_rots, 
             ch_rots_slow,

@@ -16,10 +16,10 @@
       </Build>
       <Workspace>
         <ColumnWidths>
-          <Column0>124</Column0>
-          <Column1>27</Column1>
+          <Column0>138</Column0>
+          <Column1>13</Column1>
           <Column2>27</Column2>
-          <Column3>27</Column3>
+          <Column3>0</Column3>
         </ColumnWidths>
       </Workspace>
     </Static>
@@ -27,7 +27,7 @@
       <Wnd3>
         <Tabs>
           <Tab>
-            <Identity>TabID-16625-1968</Identity>
+            <Identity>TabID-17032-2128</Identity>
             <TabName>Workspace</TabName>
             <Factory>Workspace</Factory>
             <Session>
@@ -45,7 +45,7 @@
       <Wnd4>
         <Tabs>
           <Tab>
-            <Identity>TabID-27373-1971</Identity>
+            <Identity>TabID-27781-2132</Identity>
             <TabName>Build</TabName>
             <Factory>Build</Factory>
             <Session/>
@@ -64,22 +64,9 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>88</YPos2>
-          <SelStart2>2333</SelStart2>
-          <SelEnd2>2333</SelEnd2>
-        </Tab>
-        <ActiveTab>0</ActiveTab>
-        <Tab>
-          <Factory>TextEditor</Factory>
-          <Filename>$WS_DIR$\src\lib\lcd.c</Filename>
-          <XPos>0</XPos>
-          <YPos>0</YPos>
-          <SelStart>0</SelStart>
-          <SelEnd>0</SelEnd>
-          <XPos2>0</XPos2>
-          <YPos2>72</YPos2>
-          <SelStart2>3036</SelStart2>
-          <SelEnd2>3036</SelEnd2>
+          <YPos2>27</YPos2>
+          <SelStart2>413</SelStart2>
+          <SelEnd2>413</SelEnd2>
         </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
@@ -90,9 +77,22 @@
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
           <YPos2>34</YPos2>
-          <SelStart2>957</SelStart2>
-          <SelEnd2>957</SelEnd2>
+          <SelStart2>0</SelStart2>
+          <SelEnd2>0</SelEnd2>
         </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\src\lib\lcd.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>197</YPos2>
+          <SelStart2>4931</SelStart2>
+          <SelEnd2>4944</SelEnd2>
+        </Tab>
+        <ActiveTab>2</ActiveTab>
       </Pane>
       <ActivePane>0</ActivePane>
       <Sizes>
