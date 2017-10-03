@@ -29,12 +29,18 @@
 #define LCD_D6R        GPIOA->BSRR |= BR(LCD_D6_A)
 #define LCD_D7R        GPIOA->BSRR |= BR(LCD_D7_A)
 
+#define LCD_L_I        "\x001"
+#define LCD_L_JO       "\x002"
+#define LCD_L_U        "\x003"
+#define LCD_L_P        "\x004"
+
+
 
 
 #define LCD_WRITE(LCD_WRITE_BYTE,LCD_WRITE_RS)  lcd_byte[lcd_ch_sum] = LCD_WRITE_BYTE; lcd_rs[lcd_ch_sum] = LCD_WRITE_RS; lcd_ch_sum++
 
-extern int lcd_byte[50];
-extern int lcd_rs[50];
+extern int lcd_byte[300];
+extern int lcd_rs[300];
 extern int lcd_ch;
 extern int lcd_ch_sum;
 

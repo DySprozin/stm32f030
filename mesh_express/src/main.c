@@ -91,7 +91,7 @@ void main(void) {
  */
    int debug = 0;
   lcd_str(" ", 80);
- timer.lcd_show = 1000;
+ timer.lcd_show = 5000;
  while(1) {
   GPIOB->BSRR |= BR(DEBUG_B);
   if (chrotf.check_pin) CheckPinChRots();
@@ -102,15 +102,15 @@ void main(void) {
   if (adcf.diff) AdcDiff();
   if (lcd.e) lcd_e();
   if (chrotf.lcd_show) {
+
     chrotf.lcd_show = 0;
     timer.lcd_show = 1000;
-    LCD_WRITE(b00000001, LCD_RSCMD);
-    lcd_str("GPNR!", 0);
-    lcd_str("GPNR! ", 40);
+    
+    //LCD_WRITE(b00000001, LCD_RSCMD);
+    lcd_str("anabot.ru", 0);
+    lcd_str("SUPER-SITE ;-)", 40);
     debug++;
-    LCD_WRITE('0'+debug%10, LCD_RSDATA);
-
-
+    //LCD_WRITE('0'+debug%10, LCD_RSDATA);
   }
  }
 }

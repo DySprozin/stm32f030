@@ -4,8 +4,8 @@
 #include "usart.h"
 #include "string.h"
 
-int lcd_byte[50];
-int lcd_rs[50];
+int lcd_byte[300];
+int lcd_rs[300];
 int lcd_ch = 0;
 int lcd_ch_sum = 0;
 
@@ -35,7 +35,83 @@ void lcd_init() {
   LCD_WRITE(b00001101, LCD_RSCMD);
   LCD_WRITE(b00000001, LCD_RSCMD);
   LCD_WRITE(b00010100, LCD_RSCMD);
-  LCD_WRITE(b10000000, LCD_RSCMD);
+
+  // Кириллица
+  LCD_WRITE(b01001000, LCD_RSCMD); //0x1 И
+  LCD_WRITE(b00010001, LCD_RSDATA);
+  LCD_WRITE(b00010001, LCD_RSDATA);
+  LCD_WRITE(b00010011, LCD_RSDATA);
+  LCD_WRITE(b00010101, LCD_RSDATA);
+  LCD_WRITE(b00011001, LCD_RSDATA);
+  LCD_WRITE(b00010001, LCD_RSDATA);
+  LCD_WRITE(b00010001, LCD_RSDATA);
+  LCD_WRITE(b00000000, LCD_RSDATA);
+  
+  LCD_WRITE(b01010000, LCD_RSCMD); //0x2 - Ё
+  LCD_WRITE(b00011011, LCD_RSDATA);
+  LCD_WRITE(b00000000, LCD_RSDATA);
+  LCD_WRITE(b00011111, LCD_RSDATA);
+  LCD_WRITE(b00010000, LCD_RSDATA);
+  LCD_WRITE(b00011100, LCD_RSDATA);
+  LCD_WRITE(b00010000, LCD_RSDATA);
+  LCD_WRITE(b00011111, LCD_RSDATA);
+  LCD_WRITE(b00000000, LCD_RSDATA);
+  
+  LCD_WRITE(b01011000, LCD_RSCMD); //0x3 - У
+  LCD_WRITE(b00010001, LCD_RSDATA); 
+  LCD_WRITE(b00010001, LCD_RSDATA);
+  LCD_WRITE(b00010001, LCD_RSDATA);
+  LCD_WRITE(b00001111, LCD_RSDATA);
+  LCD_WRITE(b00000001, LCD_RSDATA);
+  LCD_WRITE(b00000001, LCD_RSDATA);
+  LCD_WRITE(b00001110, LCD_RSDATA);
+  LCD_WRITE(b00000000, LCD_RSDATA);
+  
+  LCD_WRITE(b01100000, LCD_RSCMD); //0x4 - П
+  LCD_WRITE(b00011111, LCD_RSDATA);
+  LCD_WRITE(b00010001, LCD_RSDATA);
+  LCD_WRITE(b00010001, LCD_RSDATA);
+  LCD_WRITE(b00010001, LCD_RSDATA);
+  LCD_WRITE(b00010001, LCD_RSDATA);
+  LCD_WRITE(b00010001, LCD_RSDATA);
+  LCD_WRITE(b00010001, LCD_RSDATA);
+  LCD_WRITE(b00000000, LCD_RSDATA);
+  
+  
+  LCD_WRITE(b01101000, LCD_RSCMD); //0x5 --
+  LCD_WRITE(b00011111, LCD_RSDATA);
+  LCD_WRITE(b00011011, LCD_RSDATA);
+  LCD_WRITE(b00011111, LCD_RSDATA);
+  LCD_WRITE(b00011111, LCD_RSDATA);
+  LCD_WRITE(b00011111, LCD_RSDATA);
+  LCD_WRITE(b00011111, LCD_RSDATA);
+  LCD_WRITE(b00011111, LCD_RSDATA);
+  LCD_WRITE(b00011111, LCD_RSDATA);
+            
+  LCD_WRITE(b01110000, LCD_RSCMD); //0x6 --
+  LCD_WRITE(b00011111, LCD_RSDATA); 
+  LCD_WRITE(b00011011, LCD_RSDATA);
+  LCD_WRITE(b00011111, LCD_RSDATA);
+  LCD_WRITE(b00011011, LCD_RSDATA);
+  LCD_WRITE(b00011111, LCD_RSDATA);
+  LCD_WRITE(b00011111, LCD_RSDATA);
+  LCD_WRITE(b00011111, LCD_RSDATA);
+  LCD_WRITE(b00011111, LCD_RSDATA);
+            
+  LCD_WRITE(b01111000, LCD_RSCMD); //0x7 --
+  LCD_WRITE(b00011111, LCD_RSDATA);
+  LCD_WRITE(b00011011, LCD_RSDATA);
+  LCD_WRITE(b00011111, LCD_RSDATA);
+  LCD_WRITE(b00011011, LCD_RSDATA);
+  LCD_WRITE(b00011111, LCD_RSDATA);
+  LCD_WRITE(b00011011, LCD_RSDATA);
+  LCD_WRITE(b00011111, LCD_RSDATA);
+  LCD_WRITE(b00011111, LCD_RSDATA);
+  
+  
+  
+  LCD_WRITE(b10000000, LCD_RSCMD);  
+  
   
   timer_lcd.start = 1;
 
@@ -85,8 +161,12 @@ void lcd_e() {
 
 void lcd_write(int byte, int rs) {
 
-  if (LCD_IFDATA) LCD_DATA;
-  if (LCD_IFCMD) LCD_CMD;
+  if (LCD_IFDATA) {
+    LCD_DATA;
+  }
+  if (LCD_IFCMD) {
+    LCD_CMD;
+  }
 
 
   if (!lcd.h_nibble) {
@@ -102,32 +182,59 @@ void lcd_write(int byte, int rs) {
    
   }
 
-  if (byte & b00000001) LCD_D4S;
-  else LCD_D4R;
-  if (byte & b00000010) LCD_D5S;
-  else LCD_D5R;
-  if (byte & b00000100) LCD_D6S;
-  else LCD_D6R;
-  if (byte & b00001000) LCD_D7S;
-  else LCD_D7R;
+  if (byte & b00000001) {
+    LCD_D4S;
+  }
+  else {
+    LCD_D4R;
+  }
+  if (byte & b00000010) {
+    LCD_D5S;
+  }
+  else {
+    LCD_D5R;
+  }
+  if (byte & b00000100) {
+    LCD_D6S;
+  }
+  else {
+    LCD_D6R;
+  }
+  if (byte & b00001000) {
+    LCD_D7S;
+  }
+  else {
+    LCD_D7R;
+  }
 }
 
 void lcd_str(char *str, int pos) {
   
-  //if (lcd_ch > 0) {
-  //    timer_lcd.start = 0;
-  //    lcd.write = 0;
-  //    lcd_ch = 0;
-  //    lcd_ch_sum = 0;
-  //}
-
   lcd.init = 0;  
 
-  LCD_WRITE((b10000000 + pos), LCD_RSCMD);
+  if (pos >= 0) {
+    LCD_WRITE((b10000000 + pos), LCD_RSCMD);
+  }
+  
   int i = 0;
   while(str[i]) {
     LCD_WRITE(str[i++], LCD_RSDATA);
   }
+
+  if (lcd_ch_sum > 100) {
+    lcd_ch_sum = 100;
+  }
+  /*
+  usart1_tx_str("\r\n%%%% ");
+  usart1_tx_str(str);
+  usart1_tx_str(" : ");
+  usart_tx_num(lcd_ch, 4);
+  usart1_tx_str(" : ");
+  usart_tx_num(lcd_ch_sum, 4);
+  usart1_tx_str(" %%%%\r\n ");
+  */
+  if (timer_lcd.start > 0) return; 
   
   timer_lcd.start = 1;
+
 }
