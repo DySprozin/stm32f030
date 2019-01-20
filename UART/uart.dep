@@ -6,116 +6,143 @@
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\Debug\Obj\system_stm32f0xx.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\src\inc\uart.h</file>
+      <file>$PROJ_DIR$\src\inc\def.h</file>
+      <file>$PROJ_DIR$\src\inc\system_stm32f0xx.h</file>
+      <file>$PROJ_DIR$\src\inc\stm32f0xx.h</file>
+      <file>$PROJ_DIR$\src\CMSIS\system_stm32f0xx.c</file>
       <file>$PROJ_DIR$\main.c</file>
-      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-      <file>$PROJ_DIR$\Debug\Exe\uart.bin</file>
-      <file>$PROJ_DIR$\Debug\Obj\startup_stm32f0xx.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cmFunc.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cm0.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\system_stm32f0xx.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
-      <file>$TOOLKIT_DIR$\lib\dl6M_tln.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\uart.pbd</file>
       <file>$TOOLKIT_DIR$\lib\m6M_tl.a</file>
-      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
-      <file>$TOOLKIT_DIR$\lib\rt6M_tl.a</file>
-      <file>$PROJ_DIR$\Debug\Obj\system_stm32f0xx.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
-      <file>$PROJ_DIR$\Debug\Exe\c.out</file>
-      <file>$PROJ_DIR$\Debug\Obj\usart.pbi</file>
-      <file>$TOOLKIT_DIR$\config\linker\ST\stm32f030x6.icf</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\usart.o</file>
+      <file>$TOOLKIT_DIR$\config\linker\ST\stm32f030x6.icf</file>
+      <file>$PROJ_DIR$\src\startup\startup_stm32f0xx.s</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cmFunc.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cm0.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\usart.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_stm32f0xx.o</file>
+      <file>$TOOLKIT_DIR$\lib\dl6M_tln.a</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_stm32f0xx.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\startup_stm32f0xx.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+      <file>$PROJ_DIR$\src\main.c</file>
+      <file>$PROJ_DIR$\Debug\Exe\uart.bin</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\c.out</file>
       <file>$TOOLKIT_DIR$\CMSIS\Include\core_cmInstr.h</file>
       <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\uart.pbd</file>
-      <file>$PROJ_DIR$\src\startup\startup_stm32f0xx.s</file>
-      <file>$PROJ_DIR$\src\inc\system_stm32f0xx.h</file>
-      <file>$PROJ_DIR$\src\CMSIS\system_stm32f0xx.c</file>
-      <file>$PROJ_DIR$\src\inc\def.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\usart.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+      <file>$TOOLKIT_DIR$\lib\rt6M_tl.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_stm32f0xx.__cstat.et</file>
       <file>$PROJ_DIR$\src\lib\usart.c</file>
-      <file>$PROJ_DIR$\src\main.c</file>
-      <file>$PROJ_DIR$\src\inc\stm32f0xx.h</file>
-      <file>$PROJ_DIR$\src\inc\uart.h</file>
     </outputs>
     <file>
-      <name>$PROJ_DIR$\main.c</name>
+      <name>$PROJ_DIR$\src\CMSIS\system_stm32f0xx.c</name>
       <outputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 29</file>
+          <name>ICCARM</name>
+          <file> 20</file>
         </tool>
         <tool>
-          <name>ICCARM</name>
-          <file> 22</file>
+          <name>BICOMP</name>
+          <file> 23</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 37</file>
         </tool>
       </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 3 17 22 24 26 10 19 14 16 30 32 9 13 15 2</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 22 24 9 17 30 2 32 26 3 15 10 16 19 14 13</file>
+        </tool>
+      </inputs>
     </file>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 23</file>
+          <file> 31</file>
         </tool>
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\Debug\Exe\c.out</name>
+      <name>$PROJ_DIR$\main.c</name>
       <outputs>
         <tool>
-          <name>OBJCOPY</name>
-          <file> 7</file>
+          <name>ICCARM</name>
+          <file> 35</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 33</file>
         </tool>
       </outputs>
-      <inputs>
-        <tool>
-          <name>ILINK</name>
-          <file> 25 22 8 15 27 19 20 18 17</file>
-        </tool>
-      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\src\startup\startup_stm32f0xx.s</name>
       <outputs>
         <tool>
           <name>AARM</name>
-          <file> 8</file>
+          <file> 25</file>
         </tool>
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\src\CMSIS\system_stm32f0xx.c</name>
+      <name>$PROJ_DIR$\src\main.c</name>
       <outputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 0</file>
+          <name>ICCARM</name>
+          <file> 35</file>
         </tool>
         <tool>
-          <name>ICCARM</name>
-          <file> 15</file>
+          <name>BICOMP</name>
+          <file> 33</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 21</file>
+          <file> 8</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 1 6 4 14 5 32 28 2 37 11 26 9 16 13 10</file>
+          <name>ICCARM</name>
+          <file> 3 17 22 24 26 10 19 14 16 30 32 9 13 15 2 1 0</file>
         </tool>
         <tool>
-          <name>ICCARM</name>
-          <file> 37 14 1 6 2 26 16 13 9 5 28 4 10 11 32</file>
+          <name>BICOMP</name>
+          <file> 17 24 9 22 30 2 32 26 3 15 10 16 19 14 13 1 0</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\c.out</name>
+      <outputs>
+        <tool>
+          <name>OBJCOPY</name>
+          <file> 29</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 11 35 25 20 34 27 36 7 21</file>
         </tool>
       </inputs>
     </file>
@@ -123,49 +150,22 @@
       <name>$PROJ_DIR$\src\lib\usart.c</name>
       <outputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 24</file>
+          <name>ICCARM</name>
+          <file> 34</file>
         </tool>
         <tool>
-          <name>ICCARM</name>
-          <file> 27</file>
+          <name>BICOMP</name>
+          <file> 18</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>BICOMP</name>
-          <file> 14 6 4 1 5 32 28 2 37 11 26 9 16 13 10 34 38</file>
-        </tool>
-        <tool>
           <name>ICCARM</name>
-          <file> 37 14 1 6 2 26 16 13 9 5 28 4 10 11 32 34 38</file>
+          <file> 3 17 22 24 26 10 19 14 16 30 32 9 13 15 2 1 0</file>
         </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\src\main.c</name>
-      <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 29</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 22</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 12</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 14 6 4 1 5 32 28 2 37 11 26 9 16 13 10 34 38</file>
-        </tool>
-        <tool>
-          <name>ICCARM</name>
-          <file> 37 14 1 6 2 26 16 13 9 5 28 4 10 11 32 34 38</file>
+          <file> 17 24 9 22 30 2 32 26 3 15 10 16 19 14 13 1 0</file>
         </tool>
       </inputs>
     </file>

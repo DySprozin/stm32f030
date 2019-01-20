@@ -6,74 +6,47 @@
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\src\main.c</file>
       <file>$PROJ_DIR$\src\inc\system_stm32f0xx.h</file>
-      <file>$PROJ_DIR$\src\startup\startup_stm32f0xx.s</file>
       <file>$PROJ_DIR$\src\CMSIS\system_stm32f0xx.c</file>
       <file>$PROJ_DIR$\src\inc\stm32f0xx.h</file>
+      <file>$PROJ_DIR$\src\startup\startup_stm32f0xx.s</file>
+      <file>$PROJ_DIR$\src\main.c</file>
       <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$TOOLKIT_DIR$\lib\m6M_tl.a</file>
       <file>$TOOLKIT_DIR$\CMSIS\Include\core_cmInstr.h</file>
       <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\system_stm32f0xx.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\test0.pbd</file>
-      <file>$TOOLKIT_DIR$\lib\m6M_tl.a</file>
-      <file>$PROJ_DIR$\Debug\Obj\startup_stm32f0xx.o</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\startup_stm32f0xx.o</file>
       <file>$TOOLKIT_DIR$\lib\dl6M_tln.a</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\test0.pbd</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\system_stm32f0xx.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
       <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
       <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\config\linker\ST\stm32f030x4.icf</file>
       <file>$PROJ_DIR$\Debug\Obj\main.o</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
       <file>$PROJ_DIR$\Debug\Obj\system_stm32f0xx.__cstat.et</file>
-      <file>$TOOLKIT_DIR$\config\linker\ST\stm32f030x4.icf</file>
       <file>$TOOLKIT_DIR$\lib\rt6M_tl.a</file>
       <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
       <file>$PROJ_DIR$\Debug\Exe\c.out</file>
-      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cmFunc.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-      <file>$PROJ_DIR$\Debug\Exe\test0.bin</file>
+      <file>$TOOLKIT_DIR$\CMSIS\Include\core_cmFunc.h</file>
       <file>$PROJ_DIR$\Debug\Obj\system_stm32f0xx.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\test0.bin</file>
       <file>$TOOLKIT_DIR$\CMSIS\Include\core_cm0.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
       <file>$PROJ_DIR$\main.c</file>
     </outputs>
     <file>
-      <name>$PROJ_DIR$\src\main.c</name>
+      <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
-          <name>ICCARM</name>
-          <file> 19</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 5</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
+          <name>ILINK</name>
           <file> 25</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>ICCARM</name>
-          <file> 4 32 15 24 9 13 20 28 18 14 6 31 7 27 1</file>
-        </tool>
-        <tool>
-          <name>BICOMP</name>
-          <file> 32 24 31 15 14 1 6 9 4 27 13 18 20 28 7</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\src\startup\startup_stm32f0xx.s</name>
-      <outputs>
-        <tool>
-          <name>AARM</name>
-          <file> 12</file>
         </tool>
       </outputs>
     </file>
@@ -82,49 +55,76 @@
       <outputs>
         <tool>
           <name>ICCARM</name>
-          <file> 8</file>
+          <file> 15</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 30</file>
+          <file> 29</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 21</file>
+          <file> 22</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ICCARM</name>
-          <file> 4 32 15 24 9 13 20 28 18 14 6 31 7 27 1</file>
+          <file> 2 31 12 24 14 9 21 27 18 16 7 32 8 28 0</file>
         </tool>
         <tool>
           <name>BICOMP</name>
-          <file> 15 24 31 32 14 1 6 9 4 27 13 18 20 28 7</file>
+          <file> 12 24 32 31 16 0 7 14 2 28 9 18 21 27 8</file>
         </tool>
       </inputs>
     </file>
     <file>
-      <name>[ROOT_NODE]</name>
+      <name>$PROJ_DIR$\src\startup\startup_stm32f0xx.s</name>
       <outputs>
         <tool>
-          <name>ILINK</name>
+          <name>AARM</name>
+          <file> 10</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\src\main.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 20</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 5</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
           <file> 26</file>
         </tool>
       </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 2 31 12 24 14 9 21 27 18 16 7 32 8 28 0</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 31 24 32 12 16 0 7 14 2 28 9 18 21 27 8</file>
+        </tool>
+      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\Debug\Exe\c.out</name>
       <outputs>
         <tool>
           <name>OBJCOPY</name>
-          <file> 29</file>
+          <file> 30</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 22 19 12 8 17 23 11 16</file>
+          <file> 19 20 10 15 17 23 6 11</file>
         </tool>
       </inputs>
     </file>
@@ -133,7 +133,7 @@
       <outputs>
         <tool>
           <name>ICCARM</name>
-          <file> 19</file>
+          <file> 20</file>
         </tool>
         <tool>
           <name>BICOMP</name>
