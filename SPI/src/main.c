@@ -1,9 +1,17 @@
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Заюзан пин отладки PA14 !
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+
 #include "stm32f0xx.h"
 #include "def.h"
 #include "lcd.h"
 #include "spi.h"
 
-void deep_sleep();
 
 void delay (int a);
 
@@ -111,12 +119,3 @@ void delay (int a) {
  }
 }
 
-
-void deep_sleep() {
- RCC->APB1ENR |= RCC_APB1ENR_PWREN; /* PWR enable */
- SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
- PWR->CR |= PWR_CR_PDDS;
- PWR->CSR |= PWR_CSR_EWUP1;
- PWR->CR |= PWR_CR_CWUF;
- __WFI();
-}

@@ -1,5 +1,3 @@
- -B 
-
 "--endian=little" 
 
 "--cpu=Cortex-M0" 
@@ -8,13 +6,23 @@
 
 "-p" 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\arm\CONFIG\debugger\ST\STM32F030x4.ddf" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\arm\CONFIG\debugger\ST\STM32F030F4.ddf" 
 
 "--semihosting" 
 
-"--device=STM32F030x4" 
+"--device=STM32F030F4" 
 
-"--multicore_nr_of_cores=1" 
+"--drv_interface=SWD" 
+
+"--stlink_reset_strategy=0,2" 
+
+"--drv_swo_clock_setup=72000000,0,2000000" 
+
+"--drv_catch_exceptions=0x000" 
+
+"--drv_debug_ap=0" 
+
+"--stlink_probe=stlinkv2" 
 
 
 

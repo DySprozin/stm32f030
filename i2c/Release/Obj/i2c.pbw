@@ -1,0 +1,100 @@
+[
+  {
+    "ID": "c:@F@main",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void main(void)",
+    "location": {
+      "column": "6",
+      "line": "5",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\i2c\\src\\main.c"
+    },
+    "name": "main",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@SystemCoreClock",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "SystemCoreClock",
+    "location": {
+      "column": "10",
+      "line": "131",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\i2c\\src\\CMSIS\\system_stm32f0xx.c"
+    },
+    "name": "SystemCoreClock",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@uint8_t",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "uint8_t",
+    "location": {
+      "column": "5",
+      "line": "132",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\i2c\\src\\CMSIS\\system_stm32f0xx.c"
+    },
+    "name": "uint8_t",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:system_stm32f0xx.c@F@SetSysClock",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SetSysClock(void)",
+    "location": {
+      "column": "13",
+      "line": "142",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\i2c\\src\\CMSIS\\system_stm32f0xx.c"
+    },
+    "name": "SetSysClock",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SystemInit",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void SystemInit(void)",
+    "location": {
+      "column": "6",
+      "line": "159",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\i2c\\src\\CMSIS\\system_stm32f0xx.c"
+    },
+    "name": "SystemInit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SystemCoreClockUpdate",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void SystemCoreClockUpdate(void)",
+    "location": {
+      "column": "6",
+      "line": "227",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\i2c\\src\\CMSIS\\system_stm32f0xx.c"
+    },
+    "name": "SystemCoreClockUpdate",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:system_stm32f0xx.c@F@SetSysClock",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void SetSysClock(void)",
+    "location": {
+      "column": "13",
+      "line": "279",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\i2c\\src\\CMSIS\\system_stm32f0xx.c"
+    },
+    "name": "SetSysClock",
+    "origin": "project_file",
+    "scope": null
+  }
+]

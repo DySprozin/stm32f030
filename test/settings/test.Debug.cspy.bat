@@ -21,11 +21,11 @@
 
 @echo off 
 
-if not "%1" == "" goto debugFile 
+if not "%~1" == "" goto debugFile 
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\common\bin\cspybat" -f "G:\Electric\07. STM32\PROJECTS\IAR\STM32F030\test\settings\test.Debug.general.xcl" --backend -f "G:\Electric\07. STM32\PROJECTS\IAR\STM32F030\test\settings\test.Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\common\bin\cspybat" -f "G:\Electric\07. STM32\PROJECTS\IAR\stm32f030\test\settings\test.Debug.general.xcl" --backend -f "G:\Electric\07. STM32\PROJECTS\IAR\stm32f030\test\settings\test.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.2\common\bin\cspybat" -f "G:\Electric\07. STM32\PROJECTS\IAR\STM32F030\test\settings\test.Debug.general.xcl" "--debug_file=%1" --backend -f "G:\Electric\07. STM32\PROJECTS\IAR\STM32F030\test\settings\test.Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.2\common\bin\cspybat" -f "G:\Electric\07. STM32\PROJECTS\IAR\stm32f030\test\settings\test.Debug.general.xcl" "--debug_file=%~1" --backend -f "G:\Electric\07. STM32\PROJECTS\IAR\stm32f030\test\settings\test.Debug.driver.xcl" 
 
 @echo off 
 :end
