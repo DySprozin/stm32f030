@@ -47944,7 +47944,7 @@
     "display": "void i2c_init(void)",
     "location": {
       "column": "6",
-      "line": "43",
+      "line": "47",
       "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\i2c\\src\\main.c"
     },
     "name": "i2c_init",
@@ -47958,7 +47958,7 @@
     "display": "void I2C1_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "76",
+      "line": "80",
       "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\i2c\\src\\main.c"
     },
     "name": "I2C1_IRQHandler",
