@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.32.2.178/W32 for ARM                  01/Feb/2019  03:11:17
+# IAR ELF Linker V8.32.2.178/W32 for ARM                  06/Feb/2019  01:01:44
 # Copyright 2007-2018 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,7 +8,7 @@
 #    Map file     =  
 #        G:\Electric\07. STM32\PROJECTS\IAR\stm32f030\i2c\Debug\List\i2c.map
 #    Command line =  
-#        -f C:\Users\7272~1\AppData\Local\Temp\EW1C46.tmp ("G:\Electric\07.
+#        -f C:\Users\7272~1\AppData\Local\Temp\EWDCFB.tmp ("G:\Electric\07.
 #        STM32\PROJECTS\IAR\stm32f030\i2c\Debug\Obj\main.o" "G:\Electric\07.
 #        STM32\PROJECTS\IAR\stm32f030\i2c\Debug\Obj\startup_stm32f0xx.o"
 #        "G:\Electric\07.
@@ -59,73 +59,76 @@ initialize by copy { rw };
   .intvec            ro code   0x800'0000   0xc0  startup_stm32f0xx.o [1]
                              - 0x800'00c0   0xc0
 
-"P1":                                      0x563
-  .text              ro code   0x800'00c0  0x192  main.o [1]
-  .text              ro code   0x800'0252   0x7e  lz77_init_single.o [3]
-  .text              ro code   0x800'02d0  0x124  system_stm32f0xx.o [1]
-  .text              ro code   0x800'03f4   0x28  data_init.o [3]
-  .iar.init_table    const     0x800'041c   0x10  - Linker created -
-  .text              ro code   0x800'042c   0x1e  cmain.o [3]
-  .text              ro code   0x800'044a    0x4  low_level_init.o [2]
-  .text              ro code   0x800'044e    0x8  exit.o [2]
-  .text              ro code   0x800'0456    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'0458    0xa  cexit.o [3]
-  .text              ro code   0x800'0462    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'0464   0x14  exit.o [4]
-  .text              ro code   0x800'0478   0x10  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'0488    0xc  cstartup_M.o [3]
-  .text              ro code   0x800'0494    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'0496    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'0498    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'049a    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'049c    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'049e    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04a0    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04a2    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04a4    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04a6    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04a8    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04aa    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04ac    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04ae    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04b0    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04b2    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04b4    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04b6    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04b8    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04ba    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04bc    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04be    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04c0    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04c2    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04c4    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04c6    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04c8    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04ca    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04cc    0x2  startup_stm32f0xx.o [1]
-  .text              ro code   0x800'04ce    0x2  startup_stm32f0xx.o [1]
-  .rodata            const     0x800'04d0    0x0  lz77_init_single.o [3]
-  Initializer bytes  const     0x800'04d0  0x153  <for P2-1>
-                             - 0x800'0623  0x563
+"P1":                                      0x6cf
+  .text              ro code   0x800'00c0  0x340  main.o [1]
+  .text              ro code   0x800'0400  0x124  system_stm32f0xx.o [1]
+  .text              ro code   0x800'0524   0x3c  packbits_init_single.o [3]
+  .text              ro code   0x800'0560   0x28  data_init.o [3]
+  .iar.init_table    const     0x800'0588   0x10  - Linker created -
+  .text              ro code   0x800'0598   0x1e  cmain.o [3]
+  .text              ro code   0x800'05b6    0x4  low_level_init.o [2]
+  .text              ro code   0x800'05ba    0x8  exit.o [2]
+  .text              ro code   0x800'05c2    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'05c4    0xa  cexit.o [3]
+  .text              ro code   0x800'05ce    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'05d0   0x14  exit.o [4]
+  .text              ro code   0x800'05e4   0x10  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'05f4    0xc  cstartup_M.o [3]
+  .text              ro code   0x800'0600    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0602    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0604    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0606    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0608    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'060a    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'060c    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'060e    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0610    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0612    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0614    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0616    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0618    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'061a    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'061c    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'061e    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0620    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0622    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0624    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0626    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0628    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'062a    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'062c    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'062e    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0630    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0632    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0634    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0636    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'0638    0x2  startup_stm32f0xx.o [1]
+  .text              ro code   0x800'063a    0x2  startup_stm32f0xx.o [1]
+  .rodata            const     0x800'063c    0x0  packbits_init_single.o [3]
+  Initializer bytes  const     0x800'063c  0x153  <for P2-1>
+                             - 0x800'078f  0x6cf
 
-"P2", part 1 of 2:                         0x41c
-  P2-1                        0x2000'0000  0x41c  <Init block>
+"P2", part 1 of 2:                         0x314
+  P2-1                        0x2000'0000  0x314  <Init block>
     .data            inited   0x2000'0000   0x1c  main.o [1]
-    .data            inited   0x2000'001c  0x400  main.o [1]
-                            - 0x2000'041c  0x41c
+    .data            inited   0x2000'001c   0x1c  main.o [1]
+    .data            inited   0x2000'0038  0x16c  main.o [1]
+    .data            inited   0x2000'01a4  0x16c  main.o [1]
+    .bss             inited   0x2000'0310    0x4  main.o [1]
+                            - 0x2000'0314  0x314
 
 "P2", part 2 of 2:                         0x400
-  CSTACK                      0x2000'0420  0x400  <Block>
-    CSTACK           uninit   0x2000'0420  0x400  <Block tail>
-                            - 0x2000'0820  0x400
+  CSTACK                      0x2000'0318  0x400  <Block>
+    CSTACK           uninit   0x2000'0318  0x400  <Block tail>
+                            - 0x2000'0718  0x400
 
 Unused ranges:
 
          From           To    Size
          ----           --    ----
-   0x800'0623   0x800'3fff  0x39dd
-  0x2000'041c  0x2000'041f     0x4
-  0x2000'0820  0x2000'0fff   0x7e0
+   0x800'078f   0x800'3fff  0x3871
+  0x2000'0314  0x2000'0317     0x4
+  0x2000'0718  0x2000'0fff   0x8e8
 
 
 *******************************************************************************
@@ -134,11 +137,11 @@ Unused ranges:
 
           Address      Size
           -------      ----
-Copy/lz77 (__iar_lz77_init_single3)
-    1 source range, total size 0x153 (32% of destination):
-           0x800'04d0  0x153
-    1 destination range, total size 0x41c:
-          0x2000'0000  0x41c
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x153 (43% of destination):
+           0x800'063c  0x153
+    1 destination range, total size 0x314:
+          0x2000'0000  0x314
 
 
 
@@ -146,42 +149,42 @@ Copy/lz77 (__iar_lz77_init_single3)
 *** MODULE SUMMARY
 ***
 
-    Module               ro code  ro data  rw data
-    ------               -------  -------  -------
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
 command line/config:
-    ----------------------------------------------
+    -------------------------------------------------
     Total:
 
 G:\Electric\07. STM32\PROJECTS\IAR\stm32f030\i2c\Debug\Obj: [1]
-    main.o                   402      339    1 052
-    startup_stm32f0xx.o      272
-    system_stm32f0xx.o       292
-    ----------------------------------------------
-    Total:                   966      339    1 052
+    main.o                      832      339      788
+    startup_stm32f0xx.o         272
+    system_stm32f0xx.o          292
+    -------------------------------------------------
+    Total:                    1 396      339      788
 
 dl6M_tln.a: [2]
-    exit.o                     8
-    low_level_init.o           4
-    ----------------------------------------------
-    Total:                    12
+    exit.o                        8
+    low_level_init.o              4
+    -------------------------------------------------
+    Total:                       12
 
 rt6M_tl.a: [3]
-    cexit.o                   10
-    cmain.o                   30
-    cstartup_M.o              12
-    data_init.o               40
-    lz77_init_single.o       126
-    ----------------------------------------------
-    Total:                   218
+    cexit.o                      10
+    cmain.o                      30
+    cstartup_M.o                 12
+    data_init.o                  40
+    packbits_init_single.o       60
+    -------------------------------------------------
+    Total:                      152
 
 shb_l.a: [4]
-    exit.o                    20
-    ----------------------------------------------
-    Total:                    20
+    exit.o                       20
+    -------------------------------------------------
+    Total:                       20
 
-    Linker created                     16    1 024
---------------------------------------------------
-    Grand Total:           1 216      355    2 076
+    Linker created                        16    1 024
+-----------------------------------------------------
+    Grand Total:              1 580      355    1 812
 
 
 *******************************************************************************
@@ -190,38 +193,43 @@ shb_l.a: [4]
 
 Entry                       Address   Size  Type      Object
 -----                       -------   ----  ----      ------
-.iar.init_table$$Base    0x800'041c          --   Gb  - Linker created -
-.iar.init_table$$Limit   0x800'042c          --   Gb  - Linker created -
-?main                    0x800'042d         Code  Gb  cmain.o [3]
-CSTACK$$Base            0x2000'0420          --   Gb  - Linker created -
-CSTACK$$Limit           0x2000'0820          --   Gb  - Linker created -
-I2C1_IRQHandler          0x800'01db   0x2a  Code  Gb  main.o [1]
-Region$$Table$$Base      0x800'041c          --   Gb  - Linker created -
-Region$$Table$$Limit     0x800'042c          --   Gb  - Linker created -
-SetSysClock              0x800'0329   0x98  Code  Lc  system_stm32f0xx.o [1]
-SysTick_Handler          0x800'0251    0x2  Code  Gb  main.o [1]
-SystemInit               0x800'02d1   0x58  Code  Gb  system_stm32f0xx.o [1]
+.iar.init_table$$Base    0x800'0588          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'0598          --   Gb  - Linker created -
+?main                    0x800'0599         Code  Gb  cmain.o [3]
+CSTACK$$Base            0x2000'0318          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0718          --   Gb  - Linker created -
+I2C1_IRQHandler          0x800'0361   0x2a  Code  Gb  main.o [1]
+Region$$Table$$Base      0x800'0588          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'0598          --   Gb  - Linker created -
+SetSysClock              0x800'0459   0x98  Code  Lc  system_stm32f0xx.o [1]
+SysTick_Config           0x800'0163   0x30  Code  Lc  main.o [1]
+SysTick_Handler          0x800'038b    0xc  Code  Gb  main.o [1]
+SystemInit               0x800'0401   0x58  Code  Gb  system_stm32f0xx.o [1]
 __ICFEDIT_region_RAM_end__ {Abs}
                         0x2000'0fff         Data  Gb  <internal module>
 __ICFEDIT_region_RAM_start__ {Abs}
                         0x2000'0000         Data  Gb  <internal module>
 __NVIC_EnableIRQ         0x800'00c1   0x18  Code  Lc  main.o [1]
-__cmain                  0x800'042d         Code  Gb  cmain.o [3]
-__exit                   0x800'0465   0x14  Code  Gb  exit.o [4]
-__iar_data_init3         0x800'03f5   0x28  Code  Gb  data_init.o [3]
-__iar_lz77_init_single3
-                         0x800'0253   0x7e  Code  Gb  lz77_init_single.o [3]
-__iar_program_start      0x800'0489         Code  Gb  cstartup_M.o [3]
-__low_level_init         0x800'044b    0x4  Code  Gb  low_level_init.o [2]
+__NVIC_SetPriority       0x800'00d9   0x8a  Code  Lc  main.o [1]
+__cmain                  0x800'0599         Code  Gb  cmain.o [3]
+__exit                   0x800'05d1   0x14  Code  Gb  exit.o [4]
+__iar_data_init3         0x800'0561   0x28  Code  Gb  data_init.o [3]
+__iar_packbits_init_single3
+                         0x800'0525   0x3c  Code  Gb  packbits_init_single.o [3]
+__iar_program_start      0x800'05f5         Code  Gb  cstartup_M.o [3]
+__low_level_init         0x800'05b7    0x4  Code  Gb  low_level_init.o [2]
 __vector_table           0x800'0000         Data  Gb  startup_stm32f0xx.o [1]
-_call_main               0x800'0439         Code  Gb  cmain.o [3]
-_exit                    0x800'0459         Code  Gb  cexit.o [3]
-_main                    0x800'0447         Code  Gb  cmain.o [3]
-arr_data                0x2000'001c  0x400  Data  Gb  main.o [1]
-arr_init                0x2000'0000   0x1c  Data  Gb  main.o [1]
-exit                     0x800'044f    0x8  Code  Gb  exit.o [2]
-i2c_init                 0x800'0151   0x8a  Code  Gb  main.o [1]
-main                     0x800'00d9   0x78  Code  Gb  main.o [1]
+_call_main               0x800'05a5         Code  Gb  cmain.o [3]
+_exit                    0x800'05c5         Code  Gb  cexit.o [3]
+_main                    0x800'05b3         Code  Gb  cmain.o [3]
+arr_data                0x2000'0038  0x16c  Data  Gb  main.o [1]
+arr_data2               0x2000'01a4  0x16c  Data  Gb  main.o [1]
+arr_init                0x2000'001c   0x1c  Data  Gb  main.o [1]
+arr_reset               0x2000'0000   0x1c  Data  Gb  main.o [1]
+exit                     0x800'05bb    0x8  Code  Gb  exit.o [2]
+i2c_init                 0x800'02d1   0x8a  Code  Gb  main.o [1]
+lcd_on                  0x2000'0310    0x4  Data  Gb  main.o [1]
+main                     0x800'0193  0x13e  Code  Gb  main.o [1]
 
 
 [1] = G:\Electric\07. STM32\PROJECTS\IAR\stm32f030\i2c\Debug\Obj
@@ -229,9 +237,9 @@ main                     0x800'00d9   0x78  Code  Gb  main.o [1]
 [3] = rt6M_tl.a
 [4] = shb_l.a
 
-  1 216 bytes of readonly  code memory
+  1 580 bytes of readonly  code memory
     355 bytes of readonly  data memory
-  2 076 bytes of readwrite data memory
+  1 812 bytes of readwrite data memory
 
 Errors: none
 Warnings: none

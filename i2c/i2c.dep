@@ -5,12 +5,6 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\src\CMSIS\system_stm32f0xx.c</file>
-            <file>$PROJ_DIR$\src\inc\def.h</file>
-            <file>$PROJ_DIR$\src\inc\stm32f0xx.h</file>
-            <file>$PROJ_DIR$\src\inc\system_stm32f0xx.h</file>
-            <file>$PROJ_DIR$\src\startup\startup_stm32f0xx.s</file>
-            <file>$PROJ_DIR$\src\main.c</file>
             <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
             <file>$PROJ_DIR$\main.c</file>
             <file>$TOOLKIT_DIR$\CMSIS\Core\Include\cmsis_iccarm.h</file>
@@ -39,89 +33,23 @@
             <file>$PROJ_DIR$\Debug\Exe\i2c.out</file>
             <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
             <file>$PROJ_DIR$\..\test\src\main.c</file>
+            <file>$PROJ_DIR$\src\CMSIS\system_stm32f0xx.c</file>
+            <file>$PROJ_DIR$\src\inc\def.h</file>
+            <file>$PROJ_DIR$\src\inc\stm32f0xx.h</file>
+            <file>$PROJ_DIR$\src\inc\system_stm32f0xx.h</file>
+            <file>$PROJ_DIR$\src\startup\startup_stm32f0xx.s</file>
+            <file>$PROJ_DIR$\src\main.c</file>
         </outputs>
-        <file>
-            <name>[ROOT_NODE]</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 31 14</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\src\CMSIS\system_stm32f0xx.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 30</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 21</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 29</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 2 9 25 22 32 24 12 23 10 13 8 6 3</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 25 22 23 9 6 3 10 12 32 2 13 24 8</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\src\startup\startup_stm32f0xx.s</name>
-            <outputs>
-                <tool>
-                    <name>AARM</name>
-                    <file> 11</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\src\main.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 28</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 20</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 27</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 2 9 25 22 32 24 12 23 10 13 8 6 3 1</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 9 12 10 25 32 1 3 22 23 6 2 13 24 8</file>
-                </tool>
-            </inputs>
-        </file>
         <file>
             <name>$PROJ_DIR$\main.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 28</file>
+                    <file> 22</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 27</file>
+                    <file> 21</file>
                 </tool>
             </outputs>
         </file>
@@ -130,43 +58,106 @@
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 14</file>
+                    <file> 8</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 18 28 11 30 19 15 16 17</file>
+                    <file> 12 22 5 24 13 9 10 11</file>
                 </tool>
             </inputs>
-        </file>
-    </configuration>
-    <configuration>
-        <name>Release</name>
-        <outputs>
-            <file>$PROJ_DIR$\src\CMSIS\system_stm32f0xx.c</file>
-            <file>$PROJ_DIR$\src\startup\startup_stm32f0xx.s</file>
-            <file>$PROJ_DIR$\src\main.c</file>
-            <file>$PROJ_DIR$\Release\Exe\i2c.out</file>
-            <file>$PROJ_DIR$\Release\Obj\startup_stm32f0xx.o</file>
-            <file>$PROJ_DIR$\Release\Obj\main.pbi</file>
-            <file>$PROJ_DIR$\Release\Obj\system_stm32f0xx.pbi</file>
-        </outputs>
-        <file>
-            <name>[ROOT_NODE]</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 3</file>
-                </tool>
-            </outputs>
         </file>
         <file>
             <name>$PROJ_DIR$\src\CMSIS\system_stm32f0xx.c</name>
             <outputs>
                 <tool>
+                    <name>ICCARM</name>
+                    <file> 24</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 15</file>
+                </tool>
+                <tool>
                     <name>BICOMP</name>
-                    <file> 6</file>
+                    <file> 23</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 3 19 16 26 18 6 17 4 7 2 0 31</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 19 16 17 3 0 31 4 6 26 30 7 18 2</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\startup\startup_stm32f0xx.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 5</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\src\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 22</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 14</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 21</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 3 19 16 26 18 6 17 4 7 2 0 31 29</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 31 6 29 3 19 4 16 17 26 30 7 18 2 0</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 25 8</file>
+                </tool>
+            </outputs>
+        </file>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs>
+            <file>$PROJ_DIR$\Release\Exe\i2c.out</file>
+            <file>$PROJ_DIR$\Release\Obj\startup_stm32f0xx.o</file>
+            <file>$PROJ_DIR$\Release\Obj\main.pbi</file>
+            <file>$PROJ_DIR$\Release\Obj\system_stm32f0xx.pbi</file>
+            <file>$PROJ_DIR$\src\CMSIS\system_stm32f0xx.c</file>
+            <file>$PROJ_DIR$\src\startup\startup_stm32f0xx.s</file>
+            <file>$PROJ_DIR$\src\main.c</file>
+        </outputs>
+        <file>
+            <name>$PROJ_DIR$\src\CMSIS\system_stm32f0xx.c</name>
+            <outputs>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 3</file>
                 </tool>
             </outputs>
         </file>
@@ -175,7 +166,7 @@
             <outputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 4</file>
+                    <file> 1</file>
                 </tool>
             </outputs>
         </file>
@@ -184,7 +175,16 @@
             <outputs>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 5</file>
+                    <file> 2</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 0</file>
                 </tool>
             </outputs>
         </file>
