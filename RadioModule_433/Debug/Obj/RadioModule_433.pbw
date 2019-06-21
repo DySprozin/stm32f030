@@ -41554,6 +41554,174 @@
     "scope": null
   },
   {
+    "ID": "c:@SystemCoreClock",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "SystemCoreClock",
+    "location": {
+      "column": "10",
+      "line": "131",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
+    },
+    "name": "SystemCoreClock",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@AHBPrescTable",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "AHBPrescTable",
+    "location": {
+      "column": "13",
+      "line": "132",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
+    },
+    "name": "AHBPrescTable",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:system_stm32f0xx.c@F@SetSysClock",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void SetSysClock(void)",
+    "location": {
+      "column": "13",
+      "line": "142",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
+    },
+    "name": "SetSysClock",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SystemInit",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void SystemInit(void)",
+    "location": {
+      "column": "6",
+      "line": "159",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
+    },
+    "name": "SystemInit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SystemCoreClockUpdate",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void SystemCoreClockUpdate(void)",
+    "location": {
+      "column": "6",
+      "line": "227",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
+    },
+    "name": "SystemCoreClockUpdate",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:system_stm32f0xx.c@8740@F@SystemCoreClockUpdate@tmp",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "tmp",
+    "location": {
+      "column": "12",
+      "line": "229",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
+    },
+    "name": "tmp",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:system_stm32f0xx.c@8740@F@SystemCoreClockUpdate@pllmull",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "pllmull",
+    "location": {
+      "column": "21",
+      "line": "229",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
+    },
+    "name": "pllmull",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:system_stm32f0xx.c@8740@F@SystemCoreClockUpdate@pllsource",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "pllsource",
+    "location": {
+      "column": "34",
+      "line": "229",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
+    },
+    "name": "pllsource",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:system_stm32f0xx.c@8740@F@SystemCoreClockUpdate@prediv1factor",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "prediv1factor",
+    "location": {
+      "column": "49",
+      "line": "229",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
+    },
+    "name": "prediv1factor",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:system_stm32f0xx.c@F@SetSysClock",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void SetSysClock(void)",
+    "location": {
+      "column": "13",
+      "line": "279",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
+    },
+    "name": "SetSysClock",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:system_stm32f0xx.c@10505@F@SetSysClock@StartUpCounter",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "StartUpCounter",
+    "location": {
+      "column": "17",
+      "line": "281",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
+    },
+    "name": "StartUpCounter",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:system_stm32f0xx.c@10505@F@SetSysClock@HSEStatus",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "HSEStatus",
+    "location": {
+      "column": "37",
+      "line": "281",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
+    },
+    "name": "HSEStatus",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:DLib_Defaults.h@1171@macro@_DLIB_DEFAULTS_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -42380,90 +42548,6 @@
     "scope": null
   },
   {
-    "ID": "c:@F@flash_enable",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void flash_enable(void)",
-    "location": {
-      "column": "6",
-      "line": "5",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\lib\\flash.c"
-    },
-    "name": "flash_enable",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@flash_read",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "uint32_t flash_read(uint32_t)",
-    "location": {
-      "column": "10",
-      "line": "14",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\lib\\flash.c"
-    },
-    "name": "flash_read",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@flash_erase",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void flash_erase(uint32_t)",
-    "location": {
-      "column": "6",
-      "line": "18",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\lib\\flash.c"
-    },
-    "name": "flash_erase",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@flash_write_start",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void flash_write_start(void)",
-    "location": {
-      "column": "6",
-      "line": "31",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\lib\\flash.c"
-    },
-    "name": "flash_write_start",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@flash_write",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void flash_write(uint32_t, char, char)",
-    "location": {
-      "column": "6",
-      "line": "36",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\lib\\flash.c"
-    },
-    "name": "flash_write",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@flash_write_stop",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void flash_write_stop(void)",
-    "location": {
-      "column": "6",
-      "line": "48",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\lib\\flash.c"
-    },
-    "name": "flash_write_stop",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:system_stm32f0xx.h@1356@macro@__SYSTEM_STM32F0XX_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -42564,6 +42648,90 @@
   {
     "ID": "c:@F@flash_enable",
     "What": "Function",
+    "defdec": "Def",
+    "display": "void flash_enable(void)",
+    "location": {
+      "column": "6",
+      "line": "5",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\lib\\flash.c"
+    },
+    "name": "flash_enable",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@flash_read",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "uint32_t flash_read(uint32_t)",
+    "location": {
+      "column": "10",
+      "line": "14",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\lib\\flash.c"
+    },
+    "name": "flash_read",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@flash_erase",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void flash_erase(uint32_t)",
+    "location": {
+      "column": "6",
+      "line": "18",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\lib\\flash.c"
+    },
+    "name": "flash_erase",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@flash_write_start",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void flash_write_start(void)",
+    "location": {
+      "column": "6",
+      "line": "31",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\lib\\flash.c"
+    },
+    "name": "flash_write_start",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@flash_write",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void flash_write(uint32_t, char, char)",
+    "location": {
+      "column": "6",
+      "line": "36",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\lib\\flash.c"
+    },
+    "name": "flash_write",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@flash_write_stop",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void flash_write_stop(void)",
+    "location": {
+      "column": "6",
+      "line": "48",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\lib\\flash.c"
+    },
+    "name": "flash_write_stop",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@flash_enable",
+    "What": "Function",
     "defdec": "Dec",
     "display": "void flash_enable(void)",
     "location": {
@@ -42618,13 +42786,41 @@
     "scope": null
   },
   {
+    "ID": "c:@F@flash_read",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint32_t flash_read(uint32_t)",
+    "location": {
+      "column": "10",
+      "line": "3",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\flash.h"
+    },
+    "name": "flash_read",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@flash_read",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "uint32_t flash_read(uint32_t)",
+    "location": {
+      "column": "10",
+      "line": "3",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\flash.h"
+    },
+    "name": "flash_read",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@flash_write_start",
     "What": "Function",
     "defdec": "Dec",
     "display": "void flash_write_start(void)",
     "location": {
       "column": "6",
-      "line": "3",
+      "line": "4",
       "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\flash.h"
     },
     "name": "flash_write_start",
@@ -42638,7 +42834,7 @@
     "display": "void flash_write_start(void)",
     "location": {
       "column": "6",
-      "line": "3",
+      "line": "4",
       "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\flash.h"
     },
     "name": "flash_write_start",
@@ -42652,7 +42848,7 @@
     "display": "void flash_write_stop(void)",
     "location": {
       "column": "6",
-      "line": "4",
+      "line": "5",
       "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\flash.h"
     },
     "name": "flash_write_stop",
@@ -42666,7 +42862,7 @@
     "display": "void flash_write_stop(void)",
     "location": {
       "column": "6",
-      "line": "4",
+      "line": "5",
       "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\flash.h"
     },
     "name": "flash_write_stop",
@@ -42680,151 +42876,25 @@
     "display": "void flash_erase(uint32_t)",
     "location": {
       "column": "6",
-      "line": "5",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\flash.h"
-    },
-    "name": "flash_erase",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@flash_erase",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void flash_erase(uint32_t)",
-    "location": {
-      "column": "6",
-      "line": "5",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\flash.h"
-    },
-    "name": "flash_erase",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@tim_ch",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "tim_ch",
-    "location": {
-      "column": "19",
       "line": "6",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\flash.h"
     },
-    "name": "tim_ch",
-    "origin": "project_file",
+    "name": "flash_erase",
+    "origin": "user_include",
     "scope": null
   },
   {
-    "ID": "c:@tmp",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "tmp",
-    "location": {
-      "column": "19",
-      "line": "7",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
-    },
-    "name": "tmp",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@signal",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "signal",
-    "location": {
-      "column": "15",
-      "line": "8",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
-    },
-    "name": "signal",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@flash",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "flash",
-    "location": {
-      "column": "19",
-      "line": "9",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
-    },
-    "name": "flash",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@work",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "work",
-    "location": {
-      "column": "5",
-      "line": "11",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
-    },
-    "name": "work",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@220@macro@MEM_ADDR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "MEM_ADDR",
-    "location": {
-      "column": "9",
-      "line": "13",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
-    },
-    "name": "MEM_ADDR",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@main",
+    "ID": "c:@F@flash_erase",
     "What": "Function",
-    "defdec": "Def",
-    "display": "void main(void)",
-    "location": {
-      "column": "7",
-      "line": "16",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
-    },
-    "name": "main",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SysTick_Handler",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void SysTick_Handler(void)",
+    "defdec": "Dec",
+    "display": "void flash_erase(uint32_t)",
     "location": {
       "column": "6",
-      "line": "45",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
+      "line": "6",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\flash.h"
     },
-    "name": "SysTick_Handler",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:main.c@917@F@SysTick_Handler@i",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "i",
-    "location": {
-      "column": "13",
-      "line": "50",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
-    },
-    "name": "i",
-    "origin": "project_file",
+    "name": "flash_erase",
+    "origin": "user_include",
     "scope": null
   },
   {
@@ -45138,426 +45208,6 @@
     "scope": null
   },
   {
-    "ID": "c:uart.h@10@macro@WORDLEN",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "WORDLEN",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
-    },
-    "name": "WORDLEN",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@37@macro@DIVSPEED",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "DIVSPEED",
-    "location": {
-      "column": "9",
-      "line": "3",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
-    },
-    "name": "DIVSPEED",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@65@macro@STOP_BIT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "STOP_BIT",
-    "location": {
-      "column": "9",
-      "line": "4",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
-    },
-    "name": "STOP_BIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@92@macro@RX_BUF_SIZE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "RX_BUF_SIZE",
-    "location": {
-      "column": "9",
-      "line": "5",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
-    },
-    "name": "RX_BUF_SIZE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:uart.h@121@macro@STOP_SYM",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "STOP_SYM",
-    "location": {
-      "column": "9",
-      "line": "6",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
-    },
-    "name": "STOP_SYM",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@rx_buf",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "rx_buf",
-    "location": {
-      "column": "22",
-      "line": "8",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
-    },
-    "name": "rx_buf",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@usart_tx_str",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void usart_tx_str(volatile char *)",
-    "location": {
-      "column": "6",
-      "line": "10",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
-    },
-    "name": "usart_tx_str",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@usart_tx_str",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void usart_tx_str(volatile char *)",
-    "location": {
-      "column": "6",
-      "line": "10",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
-    },
-    "name": "usart_tx_str",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@usart_tx",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void usart_tx(char)",
-    "location": {
-      "column": "6",
-      "line": "11",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
-    },
-    "name": "usart_tx",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@usart_tx",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void usart_tx(char)",
-    "location": {
-      "column": "6",
-      "line": "11",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
-    },
-    "name": "usart_tx",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@usart_tx_num",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void usart_tx_num(unsigned int, unsigned char)",
-    "location": {
-      "column": "6",
-      "line": "12",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
-    },
-    "name": "usart_tx_num",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@usart_rx",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "char usart_rx(void)",
-    "location": {
-      "column": "6",
-      "line": "13",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
-    },
-    "name": "usart_rx",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@usart_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void usart_init(int)",
-    "location": {
-      "column": "6",
-      "line": "19",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
-    },
-    "name": "usart_init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@usart_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void usart_init(int)",
-    "location": {
-      "column": "6",
-      "line": "19",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
-    },
-    "name": "usart_init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@usart_tx_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void usart_tx_init(void)",
-    "location": {
-      "column": "6",
-      "line": "21",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
-    },
-    "name": "usart_tx_init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@usart_tx_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void usart_tx_init(void)",
-    "location": {
-      "column": "6",
-      "line": "21",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
-    },
-    "name": "usart_tx_init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@usart_rx_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void usart_rx_init(void)",
-    "location": {
-      "column": "6",
-      "line": "22",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
-    },
-    "name": "usart_rx_init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@usart_rx_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void usart_rx_init(void)",
-    "location": {
-      "column": "6",
-      "line": "22",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
-    },
-    "name": "usart_rx_init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@SystemCoreClock",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "SystemCoreClock",
-    "location": {
-      "column": "10",
-      "line": "131",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
-    },
-    "name": "SystemCoreClock",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@AHBPrescTable",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "AHBPrescTable",
-    "location": {
-      "column": "13",
-      "line": "132",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
-    },
-    "name": "AHBPrescTable",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:system_stm32f0xx.c@F@SetSysClock",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void SetSysClock(void)",
-    "location": {
-      "column": "13",
-      "line": "142",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
-    },
-    "name": "SetSysClock",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SystemInit",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void SystemInit(void)",
-    "location": {
-      "column": "6",
-      "line": "159",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
-    },
-    "name": "SystemInit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SystemCoreClockUpdate",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void SystemCoreClockUpdate(void)",
-    "location": {
-      "column": "6",
-      "line": "227",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
-    },
-    "name": "SystemCoreClockUpdate",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:system_stm32f0xx.c@8740@F@SystemCoreClockUpdate@tmp",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "tmp",
-    "location": {
-      "column": "12",
-      "line": "229",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
-    },
-    "name": "tmp",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:system_stm32f0xx.c@8740@F@SystemCoreClockUpdate@pllmull",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "pllmull",
-    "location": {
-      "column": "21",
-      "line": "229",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
-    },
-    "name": "pllmull",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:system_stm32f0xx.c@8740@F@SystemCoreClockUpdate@pllsource",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "pllsource",
-    "location": {
-      "column": "34",
-      "line": "229",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
-    },
-    "name": "pllsource",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:system_stm32f0xx.c@8740@F@SystemCoreClockUpdate@prediv1factor",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "prediv1factor",
-    "location": {
-      "column": "49",
-      "line": "229",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
-    },
-    "name": "prediv1factor",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:system_stm32f0xx.c@F@SetSysClock",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void SetSysClock(void)",
-    "location": {
-      "column": "13",
-      "line": "279",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
-    },
-    "name": "SetSysClock",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:system_stm32f0xx.c@10505@F@SetSysClock@StartUpCounter",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "StartUpCounter",
-    "location": {
-      "column": "17",
-      "line": "281",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
-    },
-    "name": "StartUpCounter",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:system_stm32f0xx.c@10505@F@SetSysClock@HSEStatus",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "HSEStatus",
-    "location": {
-      "column": "37",
-      "line": "281",
-      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\CMSIS\\system_stm32f0xx.c"
-    },
-    "name": "HSEStatus",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@rx_ch",
     "What": "Variable",
     "defdec": "Dec",
@@ -46160,6 +45810,258 @@
     "scope": null
   },
   {
+    "ID": "c:uart.h@10@macro@WORDLEN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "WORDLEN",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
+    },
+    "name": "WORDLEN",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@37@macro@DIVSPEED",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "DIVSPEED",
+    "location": {
+      "column": "9",
+      "line": "3",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
+    },
+    "name": "DIVSPEED",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@65@macro@STOP_BIT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "STOP_BIT",
+    "location": {
+      "column": "9",
+      "line": "4",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
+    },
+    "name": "STOP_BIT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@92@macro@RX_BUF_SIZE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "RX_BUF_SIZE",
+    "location": {
+      "column": "9",
+      "line": "5",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
+    },
+    "name": "RX_BUF_SIZE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:uart.h@121@macro@STOP_SYM",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "STOP_SYM",
+    "location": {
+      "column": "9",
+      "line": "6",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
+    },
+    "name": "STOP_SYM",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@rx_buf",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "rx_buf",
+    "location": {
+      "column": "22",
+      "line": "8",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
+    },
+    "name": "rx_buf",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@usart_tx_str",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void usart_tx_str(volatile char *)",
+    "location": {
+      "column": "6",
+      "line": "10",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
+    },
+    "name": "usart_tx_str",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@usart_tx_str",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void usart_tx_str(volatile char *)",
+    "location": {
+      "column": "6",
+      "line": "10",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
+    },
+    "name": "usart_tx_str",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@usart_tx",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void usart_tx(char)",
+    "location": {
+      "column": "6",
+      "line": "11",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
+    },
+    "name": "usart_tx",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@usart_tx",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void usart_tx(char)",
+    "location": {
+      "column": "6",
+      "line": "11",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
+    },
+    "name": "usart_tx",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@usart_tx_num",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void usart_tx_num(unsigned int, unsigned char)",
+    "location": {
+      "column": "6",
+      "line": "12",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
+    },
+    "name": "usart_tx_num",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@usart_rx",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "char usart_rx(void)",
+    "location": {
+      "column": "6",
+      "line": "13",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
+    },
+    "name": "usart_rx",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@usart_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void usart_init(int)",
+    "location": {
+      "column": "6",
+      "line": "19",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
+    },
+    "name": "usart_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@usart_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void usart_init(int)",
+    "location": {
+      "column": "6",
+      "line": "19",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
+    },
+    "name": "usart_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@usart_tx_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void usart_tx_init(void)",
+    "location": {
+      "column": "6",
+      "line": "21",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
+    },
+    "name": "usart_tx_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@usart_tx_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void usart_tx_init(void)",
+    "location": {
+      "column": "6",
+      "line": "21",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
+    },
+    "name": "usart_tx_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@usart_rx_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void usart_rx_init(void)",
+    "location": {
+      "column": "6",
+      "line": "22",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
+    },
+    "name": "usart_rx_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@usart_rx_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void usart_rx_init(void)",
+    "location": {
+      "column": "6",
+      "line": "22",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\inc\\uart.h"
+    },
+    "name": "usart_rx_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:DLib_Product_string.h@326@macro@_DLIB_PRODUCTS_STRING_H_",
     "What": "MacroDef",
     "defdec": "Def",
@@ -46255,6 +46157,174 @@
     },
     "name": "memset",
     "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@tim_ch",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "tim_ch",
+    "location": {
+      "column": "19",
+      "line": "6",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
+    },
+    "name": "tim_ch",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@byte_ch",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "byte_ch",
+    "location": {
+      "column": "29",
+      "line": "6",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
+    },
+    "name": "byte_ch",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@tmp",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "tmp",
+    "location": {
+      "column": "19",
+      "line": "7",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
+    },
+    "name": "tmp",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@flash",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "flash",
+    "location": {
+      "column": "19",
+      "line": "8",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
+    },
+    "name": "flash",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@for_chi",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "for_chi",
+    "location": {
+      "column": "26",
+      "line": "8",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
+    },
+    "name": "for_chi",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@for_chj",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "for_chj",
+    "location": {
+      "column": "37",
+      "line": "8",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
+    },
+    "name": "for_chj",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@bytes",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "bytes",
+    "location": {
+      "column": "15",
+      "line": "9",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
+    },
+    "name": "bytes",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@work",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "work",
+    "location": {
+      "column": "5",
+      "line": "11",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
+    },
+    "name": "work",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@251@macro@MEM_ADDR",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "MEM_ADDR",
+    "location": {
+      "column": "9",
+      "line": "13",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
+    },
+    "name": "MEM_ADDR",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@main",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void main(void)",
+    "location": {
+      "column": "7",
+      "line": "16",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
+    },
+    "name": "main",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@688@F@main@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "14",
+      "line": "32",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SysTick_Handler",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void SysTick_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "47",
+      "path": "G:\\Electric\\07. STM32\\PROJECTS\\IAR\\stm32f030\\RadioModule_433\\src\\main.c"
+    },
+    "name": "SysTick_Handler",
+    "origin": "project_file",
     "scope": null
   }
 ]

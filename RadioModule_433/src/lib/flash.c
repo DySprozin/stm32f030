@@ -29,14 +29,14 @@ void flash_erase(uint32_t addr) {
 }
 
 void flash_write_start() {
-  flash_erase(0x8003400);
+  flash_erase(0x8001400);
   FLASH->CR |= FLASH_CR_PG;
 }
 
 void flash_write(uint32_t addr, char byte1, char byte2) {
 
   
-  *(__IO uint16_t*) (addr) = (byte1<<8)+byte2;
+  *(__IO uint16_t*) (addr) = (byte2<<8)+byte1;
   
   
   while (!(FLASH->SR & FLASH_SR_EOP))

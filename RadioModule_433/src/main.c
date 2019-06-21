@@ -3,14 +3,14 @@
 #include "uart.h"
 #include "flash.h"
 
-volatile uint32_t tim_ch=0;
+volatile uint32_t tim_ch=0, byte_ch = 0;
 volatile uint32_t tmp=0;
-volatile char signal[2010];
-volatile uint16_t flash;
+volatile uint16_t flash, for_chi=0, for_chj=0;
+volatile char bytes[2];
 
 int work = 0;
 
-#define MEM_ADDR      0x8003400
+#define MEM_ADDR      0x8001400
 
 
  void main(void) {
@@ -19,10 +19,8 @@ int work = 0;
   GPIOA->MODER &= ~MODER_11(LOCK);
  GPIOA->MODER &= ~MODER_11(SIG);
  GPIOA->MODER |= MODER_01(SIG);
-   
  GPIOA->PUPDR |= PUPDR_10(SENS);
  GPIOA->PUPDR |= PUPDR_10(LOCK);
-   SysTick_Config(8000); /* (1) */
 
   //usart_init(13333);
   //usart_tx_init();
@@ -31,10 +29,14 @@ int work = 0;
  
   if (GPIOA->IDR & IDR(LOCK)) work = 1;
   if (work != 1) {
-     flash_erase(MEM_ADDR);
+    for (int i=0; i<10; i++) {
+     flash_erase(MEM_ADDR+1024*i);
+    }
     flash_write_start();
   }
    
+  
+   SysTick_Config(8000); /* (1) */
   while(1) {
   }
  //
@@ -44,22 +46,44 @@ int work = 0;
 
 void SysTick_Handler(void) {
 
-  if (tim_ch++ > 2000 || work == 1) {
+  if (tim_ch++ > 10000 || work == 1) {//////////////
     tim_ch--;
-    GPIOA->BSRR |= BS(SIG);
-    for(int i = 0; i < 2000; i++) {
+    //GPIOA->BSRR |= BS(SIG);
+    for_chi++;
+    for_chj++;
      // GPIOA->BSRR |= BS(SIG);
-      if ((char)flash_read(MEM_ADDR+4*i) == 0) GPIOA->BSRR |= BR(SIG);
+    if ((for_chj) == 1) {
+      if ((flash_read(MEM_ADDR+4*(for_chi >> 2)) & 0x000000FF) == 0) GPIOA->BSRR |= BR(SIG);
       else GPIOA->BSRR |= BS(SIG);
     }
+    if ((for_chj) == 2) {
+      if (((flash_read(MEM_ADDR+4*(for_chi >> 2)) & 0x0000FF00) >> 8) == 0) GPIOA->BSRR |= BR(SIG);
+      else GPIOA->BSRR |= BS(SIG);
+    }
+    if ((for_chj) == 3) {
+      if (((flash_read(MEM_ADDR+4*(for_chi >> 2)) & 0x00FF0000) >> 16) == 0) GPIOA->BSRR |= BR(SIG);
+      else GPIOA->BSRR |= BS(SIG);
+    }
+    if ((for_chj) == 4) {
+      if (((flash_read(MEM_ADDR+4*(for_chi >> 2)) & 0xFF000000) >> 24) == 0) GPIOA->BSRR |= BR(SIG);
+      else GPIOA->BSRR |= BS(SIG);
+    }
+
+     if (for_chi == 10000) for_chi = 0;
+     if ((for_chj) == 4) for_chj = 0;
   }
   else {
     if (work != 1) {
+     byte_ch++;
      if (GPIOA->IDR & IDR(SENS)) {
-      flash_write(MEM_ADDR+4*tim_ch, 0, 1);
+      bytes[byte_ch] = 1;
      }
      else {
-       flash_write(MEM_ADDR+4*tim_ch, 0, 1);
+      bytes[byte_ch] = 0;
+     }
+     if (byte_ch == 2) {
+      flash_write((MEM_ADDR+2*(tim_ch>>1)), bytes[0], bytes[1]);
+      byte_ch = 0;
      }
     }
   }
