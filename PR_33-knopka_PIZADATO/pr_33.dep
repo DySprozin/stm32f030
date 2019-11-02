@@ -66,10 +66,6 @@
                     <name>ICCARM</name>
                     <file> 31 15 12 13 19 21 18 14 17 20 22 16 32 30 29</file>
                 </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 19 29 32 17 18 30 15 12 13 14 16 31 20 21 22</file>
-                </tool>
             </inputs>
         </file>
         <file>
@@ -113,10 +109,6 @@
                     <name>ICCARM</name>
                     <file> 31 15 12 13 19 21 18 14 17 20 22 16 32</file>
                 </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 12 13 14 15 16 32 17 18 19 31 20 21 22</file>
-                </tool>
             </inputs>
         </file>
         <file>
@@ -135,10 +127,6 @@
                 <tool>
                     <name>ICCARM</name>
                     <file> 31 15 12 13 19 21 18 14 17 20 22 16 32 30 29</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 12 20 14 15 13 19 29 30 32 17 18 31 21 22 16</file>
                 </tool>
             </inputs>
         </file>
